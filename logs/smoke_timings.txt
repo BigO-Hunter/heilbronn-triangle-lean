@@ -1,0 +1,6 @@
+S0_baseline            warm-real=4.61s
+S1_elab_huge           warm-real=4.89s
+S2_kernel_rfl          warm-real=4.52s
+S3_norm_num_reduce     warm-real=5.39s
+S4_rpow_elab           warm-real=4.48s
+S5_div_one_form        warm-real=5.21s
