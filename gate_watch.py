@@ -36,6 +36,7 @@ Usage:
     python3 gate_watch.py            # status line + exit code
     python3 gate_watch.py --json     # machine-readable verdict
     python3 gate_watch.py --rider    # + register rider on OPEN transition
+    python3 gate_watch.py --bulletin # + bulletin announce on OPEN (direct script, no bridge)
 
 State file: logs/gate_watch_state.json (workspace-local; untracked).
 Run: daily by any waking mind (capsule/R2125607854 riders carry the filing
@@ -151,7 +152,9 @@ def save_state(state: dict) -> None:
     STATE_PATH.write_text(json.dumps(state, indent=1) + "\n")
 
 
-def body_side_effects(verdict: dict, prior: dict, *, want_rider: bool = False) -> list[str]:
+def body_side_effects(
+    verdict: dict, prior: dict, *, want_rider: bool = False, want_bulletin: bool = False
+) -> list[str]:
     """Soma state key + transition rider. Best-effort, loud on failure."""
     notes: list[str] = []
     changed = prior.get("last_status") != verdict["gate"]
@@ -179,7 +182,33 @@ def body_side_effects(verdict: dict, prior: dict, *, want_rider: bool = False) -
         print(f"WARNING: soma state write failed: {exc}", file=sys.stderr)
         notes.append("soma-state:FAILED")
 
-    # (b) rider on the CLOSED->OPEN transition only (never on steady states).
+    # (b) bulletin announce on the CLOSED->OPEN transition — via the direct
+    # in-process script (scripts/bulletin_post.py, R2125607920 cure), NOT the
+    # MCP bridge: the gate opens on its own schedule and the bridge can stall.
+    if changed and verdict["gate"] == "OPEN" and want_bulletin:
+        try:
+            import subprocess
+
+            script = Path.home() / "MultiAgency" / "scripts" / "bulletin_post.py"
+            proc = subprocess.run(
+                [
+                    "python3", str(script),
+                    "--agent", "heilbronn-gate-watch",
+                    "--theme", "heilbronn-gate",
+                    f"GATE OPEN at {verdict['ts']} — signals: {'+'.join(verdict['open_signals'])}. "
+                    "File Stage A (Bound 0) within hours: checklist in R2125607854 riders; "
+                    "stagea/ + stageb/ both green at /Volumes/Substrate-1/bigo/heilbronn-lane.",
+                ],
+                capture_output=True, text=True, timeout=120,
+            )
+            notes.append(f"bulletin:rc={proc.returncode}")
+            if proc.returncode != 0:
+                print(f"WARNING: bulletin post failed: {proc.stderr[:200]}", file=sys.stderr)
+        except Exception as exc:  # noqa: BLE001 — best-effort, loud, never fatal
+            print(f"WARNING: bulletin announce failed: {exc}", file=sys.stderr)
+            notes.append("bulletin:FAILED")
+
+    # (c) rider on the CLOSED->OPEN transition only (never on steady states).
     if changed and verdict["gate"] == "OPEN" and want_rider:
         try:
             from multiaim_agents.memory.palimpsest import get_soma
@@ -209,6 +238,10 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Heilbronn gate poll (see module docstring)")
     parser.add_argument("--json", action="store_true", help="machine-readable verdict")
     parser.add_argument("--rider", action="store_true", help="rider R2125607854 on OPEN transition")
+    parser.add_argument(
+        "--bulletin", action="store_true",
+        help="announce OPEN transition via scripts/bulletin_post.py (direct, bridge-independent)",
+    )
     args = parser.parse_args()
 
     try:
@@ -219,7 +252,7 @@ def main() -> int:
         return 1
 
     prior = load_state()
-    notes = body_side_effects(verdict, prior, want_rider=args.rider)
+    notes = body_side_effects(verdict, prior, want_rider=args.rider, want_bulletin=args.bulletin)
     save_state(
         {
             "last_status": verdict["gate"],
