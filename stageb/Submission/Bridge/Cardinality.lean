@@ -41,7 +41,7 @@ variable {k r : ℕ}
 
 /-- The upper constant `C_k` in `N³/tau ≤ C_k · r^(90870k+30)`. -/
 def cubeTauConst (k : ℕ) : ℝ :=
-  3 * 2 ^ 30 * ((200 * k ^ 2 : ℕ) : ℝ) ^ (3029 * k + 1)
+  3 * 2 ^ 30 * ((200 * k ^ 2 : ℕ) : ℝ) ^ (k * 3029 + 1)
 
 lemma cubeTauConst_nonneg (k : ℕ) : 0 ≤ cubeTauConst k := by
   unfold cubeTauConst
@@ -109,61 +109,60 @@ lemma tau_ge : (P.h : ℝ) / (3 * (P.B : ℝ)) ≤ (P.tau : ℝ) := by
   nlinarith
 
 lemma B3029_le :
-    (P.B : ℝ) ^ (3029 * k + 1) ≤
-      ((200 * k ^ 2 : ℕ) : ℝ) ^ (3029 * k + 1) * (r : ℝ) ^ (90870 * k + 30) := by
+    (P.B : ℝ) ^ (k * 3029 + 1) ≤
+      ((200 * k ^ 2 : ℕ) : ℝ) ^ (k * 3029 + 1) * (r : ℝ) ^ (k * 90870 + 30) := by
   have hb : (P.B : ℝ) ≤ ((200 * k ^ 2 : ℕ) : ℝ) * (r : ℝ) ^ 30 := by
     have : ((200 * k ^ 2 * r ^ 30 : ℕ) : ℝ) =
         ((200 * k ^ 2 : ℕ) : ℝ) * (r : ℝ) ^ 30 := by push_cast; ring
     exact_mod_cast P.base_upper
-  calc (P.B : ℝ) ^ (3029 * k + 1)
-      ≤ (((200 * k ^ 2 : ℕ) : ℝ) * (r : ℝ) ^ 30) ^ (3029 * k + 1) := by gcongr
-    _ = ((200 * k ^ 2 : ℕ) : ℝ) ^ (3029 * k + 1) * ((r : ℝ) ^ 30) ^ (3029 * k + 1) :=
+  calc (P.B : ℝ) ^ (k * 3029 + 1)
+      ≤ (((200 * k ^ 2 : ℕ) : ℝ) * (r : ℝ) ^ 30) ^ (k * 3029 + 1) := by gcongr
+    _ = ((200 * k ^ 2 : ℕ) : ℝ) ^ (k * 3029 + 1) * ((r : ℝ) ^ 30) ^ (k * 3029 + 1) :=
         mul_pow _ _ _
-    _ = ((200 * k ^ 2 : ℕ) : ℝ) ^ (3029 * k + 1) * (r : ℝ) ^ (90870 * k + 30) := by
-        rw [show ((r : ℝ) ^ 30) ^ (3029 * k + 1) = (r : ℝ) ^ (30 * (3029 * k + 1))
+    _ = ((200 * k ^ 2 : ℕ) : ℝ) ^ (k * 3029 + 1) * (r : ℝ) ^ (k * 90870 + 30) := by
+        rw [show ((r : ℝ) ^ 30) ^ (k * 3029 + 1) = (r : ℝ) ^ (30 * (k * 3029 + 1))
           by rw [pow_mul]]
         congr 1
         ring
 
 /-- The lower two-sided ingredient: `2·r^γ < N³/tau`, `γ = 90870k+30`. -/
 theorem cube_div_tau_gt :
-    2 * (r : ℝ) ^ (90870 * k + 30) < (P.N : ℝ) ^ 3 / (P.tau : ℝ) := by
+    2 * (r : ℝ) ^ (k * 90870 + 30) < (P.N : ℝ) ^ 3 / (P.tau : ℝ) := by
   have hBpos : (0 : ℝ) < P.B := by exact_mod_cast P.base_prime.pos
-  have hstep : 2 * (P.B : ℝ) ^ (3029 * k + 1) =
-      (P.B : ℝ) ^ (3030 * k) / ((P.B : ℝ) ^ (k - 1) / 2) := by
-    have he : 3030 * k = 3029 * k + 1 + (k - 1) := by
+  have hstep : 2 * (P.B : ℝ) ^ (k * 3029 + 1) =
+      (P.B : ℝ) ^ (k * 3030) / ((P.B : ℝ) ^ (k - 1) / 2) := by
+    have he : k * 3030 = k * 3029 + 1 + (k - 1) := by
       have := P.two_le_k; omega
     rw [he, pow_add]
     field_simp
     ring
-  have hN3 : ((P.h ^ 1010 : ℕ) : ℝ) ^ 3 = (P.B : ℝ) ^ (3030 * k) := by
+  have hN3 : ((P.h ^ 1010 : ℕ) : ℝ) ^ 3 = (P.B : ℝ) ^ (k * 3030) := by
     push_cast
     calc ((P.h : ℝ) ^ 1010) ^ 3
         = (P.h : ℝ) ^ (1010 * 3) := by rw [← pow_mul]
       _ = (P.h : ℝ) ^ 3030 := by congr 1
       _ = ((P.B : ℝ) ^ k) ^ 3030 := by rw [h_cast P]
       _ = (P.B : ℝ) ^ (k * 3030) := by rw [← pow_mul]
-      _ = (P.B : ℝ) ^ (3030 * k) := by congr 1; ring
-  have hdiv : (P.B : ℝ) ^ (3030 * k) / ((P.B : ℝ) ^ (k - 1) / 2) ≤
+  have hdiv : (P.B : ℝ) ^ (k * 3030) / ((P.B : ℝ) ^ (k - 1) / 2) ≤
       (P.N : ℝ) ^ 3 / (P.tau : ℝ) := by
     rw [← hN3]
     gcongr
     · exact_mod_cast P.tau_pos
     · exact_mod_cast N_ge_h1010 P
     · exact tau_le_half P
-  calc 2 * (r : ℝ) ^ (90870 * k + 30)
-      = 2 * ((r : ℝ) ^ 30) ^ (3029 * k + 1) := by
-        rw [show (90870 * k + 30 : ℕ) = 30 * (3029 * k + 1) by ring, ← pow_mul]
-    _ < 2 * (P.B : ℝ) ^ (3029 * k + 1) := by
+  calc 2 * (r : ℝ) ^ (k * 90870 + 30)
+      = 2 * ((r : ℝ) ^ 30) ^ (k * 3029 + 1) := by
+        rw [show (k * 90870 + 30 : ℕ) = 30 * (k * 3029 + 1) by ring, ← pow_mul]
+    _ < 2 * (P.B : ℝ) ^ (k * 3029 + 1) := by
         refine mul_lt_mul_of_pos_left ?_ (by norm_num)
         exact pow_lt_pow_left₀ (r30_lt_B P) (by positivity) (by positivity)
-    _ = (P.B : ℝ) ^ (3030 * k) / ((P.B : ℝ) ^ (k - 1) / 2) := hstep
+    _ = (P.B : ℝ) ^ (k * 3030) / ((P.B : ℝ) ^ (k - 1) / 2) := hstep
     _ ≤ (P.N : ℝ) ^ 3 / (P.tau : ℝ) := hdiv
 
 /-- The upper two-sided ingredient: `N³/tau ≤ C_k·r^γ`, `γ = 90870k+30`. -/
 theorem cube_div_tau_le :
     (P.N : ℝ) ^ 3 / (P.tau : ℝ) ≤
-      cubeTauConst k * (r : ℝ) ^ (90870 * k + 30) := by
+      cubeTauConst k * (r : ℝ) ^ (k * 90870 + 30) := by
   have hBpos : (0 : ℝ) < P.B := by exact_mod_cast P.base_prime.pos
   have hhpos : (0 : ℝ) < P.h := by
     rw [h_cast P]
@@ -185,14 +184,14 @@ theorem cube_div_tau_le :
     _ = 3 * 2 ^ 30 * ((P.h : ℝ) ^ 3029 * (P.B : ℝ)) := by
         rw [hh3030, div_div_eq_mul_div, hpow]
         field_simp [ne_of_gt hhpos]
-    _ = 3 * 2 ^ 30 * (P.B : ℝ) ^ (3029 * k + 1) := by
-        have h1 : ((P.B : ℝ) ^ k) ^ 3029 = (P.B : ℝ) ^ (3029 * k) := by
-          rw [← pow_mul]; congr 1; ring
+    _ = 3 * 2 ^ 30 * (P.B : ℝ) ^ (k * 3029 + 1) := by
+        have h1 : ((P.B : ℝ) ^ k) ^ 3029 = (P.B : ℝ) ^ (k * 3029) := by
+          rw [← pow_mul]
         rw [h_cast P, h1]
         congr 1
-    _ ≤ 3 * 2 ^ 30 * (((200 * k ^ 2 : ℕ) : ℝ) ^ (3029 * k + 1) *
-        (r : ℝ) ^ (90870 * k + 30)) := by gcongr; exact B3029_le P
-    _ = cubeTauConst k * (r : ℝ) ^ (90870 * k + 30) := by
+    _ ≤ 3 * 2 ^ 30 * (((200 * k ^ 2 : ℕ) : ℝ) ^ (k * 3029 + 1) *
+        (r : ℝ) ^ (k * 90870 + 30)) := by gcongr; exact B3029_le P
+    _ = cubeTauConst k * (r : ℝ) ^ (k * 90870 + 30) := by
         unfold cubeTauConst
         ring
 
@@ -201,23 +200,23 @@ end Facts
 /-- THE two-sided cardinality bound, lower side: `√2·r^α − 1 < sampleCard`,
 with `α = 45435k+16` the paper's cardinality exponent. -/
 theorem sampleCard_gt (P : PrimeParameterData k r) :
-    Real.sqrt 2 * (r : ℝ) ^ (45435 * k + 16) - 1 < (P.sampleCard : ℝ) := by
-  have hkey : Real.sqrt 2 * (r : ℝ) ^ (45435 * k + 16) <
+    Real.sqrt 2 * (r : ℝ) ^ (k * 45435 + 16) - 1 < (P.sampleCard : ℝ) := by
+  have hkey : Real.sqrt 2 * (r : ℝ) ^ (k * 45435 + 16) <
       (r : ℝ) * Real.sqrt ((P.N : ℝ) ^ 3 / (P.tau : ℝ)) := by
-    have hsq : Real.sqrt 2 * (r : ℝ) ^ (45435 * k + 15) <
+    have hsq : Real.sqrt 2 * (r : ℝ) ^ (k * 45435 + 15) <
         Real.sqrt ((P.N : ℝ) ^ 3 / (P.tau : ℝ)) := by
       rw [Real.lt_sqrt (by positivity)]
-      have h2 : (Real.sqrt 2 * (r : ℝ) ^ (45435 * k + 15)) ^ 2 =
-          (2 : ℝ) * (r : ℝ) ^ (90870 * k + 30) := by
+      have h2 : (Real.sqrt 2 * (r : ℝ) ^ (k * 45435 + 15)) ^ 2 =
+          (2 : ℝ) * (r : ℝ) ^ (k * 90870 + 30) := by
         rw [mul_pow, Real.sq_sqrt (by positivity : (0 : ℝ) ≤ 2), ← pow_mul]
         congr 1
         congr 1
         ring
       rw [h2]
       exact cube_div_tau_gt P
-    calc Real.sqrt 2 * (r : ℝ) ^ (45435 * k + 16)
-        = (r : ℝ) * (Real.sqrt 2 * (r : ℝ) ^ (45435 * k + 15)) := by
-          rw [show (45435 * k + 16 : ℕ) = 45435 * k + 15 + 1 by ring,
+    calc Real.sqrt 2 * (r : ℝ) ^ (k * 45435 + 16)
+        = (r : ℝ) * (Real.sqrt 2 * (r : ℝ) ^ (k * 45435 + 15)) := by
+          rw [show (k * 45435 + 16 : ℕ) = k * 45435 + 15 + 1 by ring,
             pow_add, pow_one]
           ring
       _ < (r : ℝ) * Real.sqrt ((P.N : ℝ) ^ 3 / (P.tau : ℝ)) := by
@@ -231,24 +230,24 @@ theorem sampleCard_gt (P : PrimeParameterData k r) :
 /-- THE two-sided cardinality bound, upper side: `sampleCard ≤ √C_k·r^α`. -/
 theorem sampleCard_le_tight (P : PrimeParameterData k r) :
     (P.sampleCard : ℝ) ≤
-      Real.sqrt (cubeTauConst k) * (r : ℝ) ^ (45435 * k + 16) := by
+      Real.sqrt (cubeTauConst k) * (r : ℝ) ^ (k * 45435 + 16) := by
   have hsqrt : Real.sqrt ((P.N : ℝ) ^ 3 / (P.tau : ℝ)) ≤
-      Real.sqrt (cubeTauConst k) * (r : ℝ) ^ (45435 * k + 15) := by
-    have heq : Real.sqrt (cubeTauConst k * (r : ℝ) ^ (90870 * k + 30)) =
-        Real.sqrt (cubeTauConst k) * (r : ℝ) ^ (45435 * k + 15) := by
+      Real.sqrt (cubeTauConst k) * (r : ℝ) ^ (k * 45435 + 15) := by
+    have heq : Real.sqrt (cubeTauConst k * (r : ℝ) ^ (k * 90870 + 30)) =
+        Real.sqrt (cubeTauConst k) * (r : ℝ) ^ (k * 45435 + 15) := by
       rw [Real.sqrt_mul (cubeTauConst_nonneg k),
-        show (r : ℝ) ^ (90870 * k + 30) = ((r : ℝ) ^ (45435 * k + 15)) ^ 2 from by
-          rw [(by ring : (90870 * k + 30 : ℕ) = (45435 * k + 15) * 2), pow_mul],
+        show (r : ℝ) ^ (k * 90870 + 30) = ((r : ℝ) ^ (k * 45435 + 15)) ^ 2 from by
+          rw [(by ring : (k * 90870 + 30 : ℕ) = (k * 45435 + 15) * 2), pow_mul],
         Real.sqrt_sq (pow_nonneg (Nat.cast_nonneg _) _)]
     rw [← heq]
     exact Real.sqrt_le_sqrt (cube_div_tau_le P)
   calc (P.sampleCard : ℝ)
       ≤ (r : ℝ) * Real.sqrt ((P.N : ℝ) ^ 3 / (P.tau : ℝ)) :=
         Nat.floor_le (mul_nonneg (Nat.cast_nonneg _) (Real.sqrt_nonneg _))
-    _ ≤ (r : ℝ) * (Real.sqrt (cubeTauConst k) * (r : ℝ) ^ (45435 * k + 15)) := by gcongr
-    _ = Real.sqrt (cubeTauConst k) * (r : ℝ) ^ (45435 * k + 16) := by
+    _ ≤ (r : ℝ) * (Real.sqrt (cubeTauConst k) * (r : ℝ) ^ (k * 45435 + 15)) := by gcongr
+    _ = Real.sqrt (cubeTauConst k) * (r : ℝ) ^ (k * 45435 + 16) := by
         conv_rhs =>
-          rw [(by ring : (45435 * k + 16 : ℕ) = 45435 * k + 15 + 1), pow_add,
+          rw [(by ring : (k * 45435 + 16 : ℕ) = k * 45435 + 15 + 1), pow_add,
             pow_one]
         ring
 
