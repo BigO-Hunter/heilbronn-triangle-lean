@@ -1,0 +1,12 @@
+anthropic-lake-manifest.json
+anthropic-tools.json
+dft-e8.json
+dft233.json
+direct.json
+factoring-lake-manifest.json
+integer-factoring-sqrtlog.json
+integer-factoring.json
+lake-manifest.json
+matrix-nine-fourths.json
+tools-v4.35.0.json
+tools.json
