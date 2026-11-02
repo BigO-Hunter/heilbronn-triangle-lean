@@ -1,4 +1,4 @@
-import Submission.Statement
+import Submission.VacuityCheck
 
 /-!
 Provenance: new file, local pre-build (R2125607854), 2026-11-01.
@@ -13,7 +13,11 @@ controller binds that shape. Both are defeq; Rat literals do not kernel-reduce
 
 namespace BigOSpeedrun.HeilbronnTriangle
 
-/-- η = 0 in the `((p : ℚ) / q)` generator shape, `q = 1`. -/
-theorem bound_zero_div_form : Bound ((0 : ℚ) / 1) := bound_zero
+/-- η = 0 in the `((p : ℚ) / q)` generator shape, `q = 1`. Rat literal forms do
+not kernel-reduce (subset-sum #94 filing lesson), so bridge by `norm_num`. -/
+theorem bound_zero_div_form : Bound ((0 : ℚ) / 1) := by
+  have h : ((0 : ℚ) / 1) = (0 : ℚ) := by norm_num
+  rw [h]
+  exact bound_zero
 
 end BigOSpeedrun.HeilbronnTriangle

@@ -1,0 +1,12 @@
+✔ [8924/8936] Built Submission.OAI.Geometry.HeilbronnTriangle.Definitions (25s)
+✔ [8925/8936] Built OAI.Geometry.HeilbronnTriangle.Definitions (25s)
+✔ [8926/8936] Built Submission.Statement (4.0s)
+✔ [8927/8936] Built OAI (4.0s)
+✔ [8929/8936] Built VerifierChallenge (4.0s)
+✖ [8931/8936] Building Submission.ZeroForms (3.0s)
+trace: .> LEAN_PATH=/Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/packages/Cli/.lake/build/lib/lean:/Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/packages/batteries/.lake/build/lib/lean:/Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/packages/Qq/.lake/build/lib/lean:/Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/packages/aesop/.lake/build/lib/lean:/Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/packages/proofwidgets/.lake/build/lib/lean:/Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/packages/importGraph/.lake/build/lib/lean:/Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/packages/plausible/.lake/build/lib/lean:/Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/packages/mathlib/.lake/build/lib/lean:/Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/build/lib/lean /Users/dmitri.arkhipov/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /Volumes/Substrate-1/bigo/heilbronn-lane/stagea/Submission/ZeroForms.lean -o /Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/build/lib/lean/Submission/ZeroForms.olean -i /Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/build/lib/lean/Submission/ZeroForms.ilean -c /Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/build/ir/Submission/ZeroForms.c --setup /Volumes/Substrate-1/bigo/heilbronn-lane/stagea/.lake/build/ir/Submission/ZeroForms.setup.json --json
+error: Submission/ZeroForms.lean:17:53: Unknown identifier `bound_zero`
+✔ [8932/8936] Built Submission.VacuityCheck (5.3s)
+Some required targets logged failures:
+- Submission.ZeroForms
+error: build failed
