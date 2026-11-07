@@ -350,7 +350,7 @@ theorem bound_stageB :
   intro p hp q hq u hu hpq hpu hqu
   calc Real.rpow C' (-2 + heilbronnExponent) *
         Real.rpow (n : ℝ) (-2 + heilbronnExponent)
-      = Real.rpow (C' * (n : ℝ)) (-2 + heilbronnExponent) := hstep2
+      = Real.rpow (C' * (n : ℝ)) (-2 + heilbronnExponent) := hstep2.symm
     _ ≤ Real.rpow (s : ℝ) (-2 + heilbronnExponent) := hstep1
     _ ≤ triangleArea p q u := hsub p hp q hq u hu hpq hpu hqu
 

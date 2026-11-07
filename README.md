@@ -7,11 +7,12 @@ issue route.
 import Submission.HeilbronnStatement
 
 theorem Race.bound :
-    BigOSpeedrun.HeilbronnTriangle.Bound ((1 : ℚ) / 10^237) := …
+    BigOSpeedrun.HeilbronnTriangle.Bound
+      ((1 : ℚ) / 138611120630192845449848501984762489503949180120972521287304259199089718296986575839672803644586516021090063092820239685405507227054093124597541492458051962596474875313132928055153805949190893429472432269634916029759500562026384000100000) := …
 ```
 
-Filed saving: `η = 1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`
-= `10^-237` (238-digit denominator, one reduced fraction of digits, as the
+Filed saving: `η = 1/(100000·K) = 1/138611120630192845449848501984762489503949180120972521287304259199089718296986575839672803644586516021090063092820239685405507227054093124597541492458051962596474875313132928055153805949190893429472432269634916029759500562026384000100000`
+(237-digit denominator, numerator 1 ⇒ one reduced fraction, as the
 submission form requires).
 
 ## Build
@@ -38,9 +39,10 @@ at `1581d4cb` (imports rewritten only) or the new bridge in `Submission/Bridge/`
 that turns that tree's subsequence statement into the board's "every large `n`"
 statement. See `PROVENANCE.md` and `BRIDGE_EDITS.md`.
 
-The saving is proven at `1/(100000·10^232)`, slightly below the exact
-comparator exponent `1/(100000·K)`: `heilbronnK ≤ 10^232` is proved with `K`
-kept opaque, so nothing unfolds the 232-digit numeral `K`.
+The saving is proven at the exact comparator exponent `1/(100000·K)`:
+`K = C(C(163,41),3)² + 1` is computed in Lean as a 232-digit numeral via the
+factorial route (`Submission/Bridge/KBound.lean`), reached only through the
+in-tree `heilbronnK_eq`, never by unfolding the `@[irreducible]` definition.
 
 Axiom audit (`#print axioms Race.bound`):
 
