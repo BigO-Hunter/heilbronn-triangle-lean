@@ -1,0 +1,33 @@
+Heilbronn triangle Lean submission for Big O Speedrun
+https://bigospeedrun.com/other/heilbronn-triangle
+
+Licensed under the Apache License, Version 2.0 (LICENSE).
+
+Submission/HeilbronnStatement.lean
+  Copied byte for byte from
+  https://github.com/bigospeedrun/verifier
+  path:   challenges/heilbronn-triangle/VerifierStatement.lean
+  blob:   bff8ba7bc805b881893123eb9b26e348b2bb6ee8
+  Unmodified.
+    The OAI.Problem355 definitions in that file:
+      Copyright OpenAI. Licensed under the Apache License, Version 2.0.
+      Source: https://github.com/openai/math
+      Commit: 1581d4cbdd69a0faf34b2089614fe2a814316a6a
+      Path:   lean/OAI/Geometry/HeilbronnTriangle/Definitions.lean
+      Copied byte for byte, without modification.
+    The BigOSpeedrun.HeilbronnTriangle.Bound adapter in that file:
+      New parameterized adapter for the board above.
+      Prepared with assistance from Claude (Anthropic) as agent for
+      @joshuacortez. It does not modify the OpenAI definitions, and OpenAI did
+      not author the parameterization.
+
+Submission/OAI/Geometry/HeilbronnTriangle/**
+  Copyright OpenAI. Licensed under the Apache License, Version 2.0.
+  Source: https://github.com/openai/math
+  Commit: 1581d4cbdd69a0faf34b2089614fe2a814316a6a
+  Path:   lean/OAI/Geometry/HeilbronnTriangle/
+  Change: import paths rewritten to the Submission layout. Every other line is
+  byte-identical; per-file SHA-256 recorded in PORT_MANIFEST.json.
+
+Submission/Bridge/** and Submission.lean
+  New work by the submitter, licensed under the Apache License, Version 2.0.

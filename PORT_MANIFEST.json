@@ -1,0 +1,1229 @@
+{
+ "source_repo": "https://github.com/openai/math",
+ "source_commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+ "source_path": "lean/OAI/Geometry/HeilbronnTriangle/",
+ "rewrite": "'import OAI.Geometry.HeilbronnTriangle*' -> 'import Submission.OAI.Geometry.HeilbronnTriangle*'; all other lines byte-identical",
+ "files": {
+  "OAI/Geometry/HeilbronnTriangle/ActualPointLaw.lean": {
+   "source_sha256": "bdb579f1238fd2a1d245b9106e466925bb43a6ac61fc6ba741bdf4b8ee1adee8",
+   "ported_sha256": "65b1690007968b5ab2e6627fbe19d5a2748698e2270901abd0c6f8a106712a4b",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/ActualPointLawBounds.lean": {
+   "source_sha256": "7cb384f7617d6e5b63b64c72a409edbf6a9a0468c603c148298c47169671c923",
+   "ported_sha256": "019bdcd48a2167959cbb2c218444866fcb3aeae38b0738e2df533a95368b0ff6",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/ActualPointLawTriples.lean": {
+   "source_sha256": "acd4eb1b599c0e79bd1e199272c7e7a8d797408a030d80f2ff1bcc3422f724fb",
+   "ported_sha256": "1ed453450c8925ddcbbe9b609f7ce12ac8317e02cbe732b7f2e5cc12efc231e3",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/ActualWeightedFiberCount.lean": {
+   "source_sha256": "03ade356a476bfe8813d4a8d267c2503c5feb762c17f3fbf0971db2475462039",
+   "ported_sha256": "64c1ce405a4e569064b127ea8602a14e6465bce30a60dda6afdbe55533b4bee4",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/AffineShellCount.lean": {
+   "source_sha256": "a2c6cb8209b4e15ef3b7fbf8fa74b9b3af44a99742cbd3bda8a0fc379dad0efd",
+   "ported_sha256": "a2c6cb8209b4e15ef3b7fbf8fa74b9b3af44a99742cbd3bda8a0fc379dad0efd",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/AffineTripleOrbit.lean": {
+   "source_sha256": "1ee0934050fd7009cf11cb8291ee9141f4536f01e97521a3ea9d09643a7b0354",
+   "ported_sha256": "1ee0934050fd7009cf11cb8291ee9141f4536f01e97521a3ea9d09643a7b0354",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/AllowedShifts.lean": {
+   "source_sha256": "898b46f665d864e58f6a4194addb40125bf1c4de2cf34367f50fdebbfb139a99",
+   "ported_sha256": "898b46f665d864e58f6a4194addb40125bf1c4de2cf34367f50fdebbfb139a99",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/AlterationAsymptotics.lean": {
+   "source_sha256": "64cf8982463fc37d068158bdf0dadcf7ca569245ae63492569ba807a31a2cc93",
+   "ported_sha256": "64cf8982463fc37d068158bdf0dadcf7ca569245ae63492569ba807a31a2cc93",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/AnisotropicCount.lean": {
+   "source_sha256": "03a865b8623715533f492135faf03e5b59a4111d882e2415b02ccc01f3b4606a",
+   "ported_sha256": "c87ac4ed3a9bb7f09b6d627dcedfda8f2b64c890b110e1868ceff599d77f368e",
+   "imports_rewritten": 5
+  },
+  "OAI/Geometry/HeilbronnTriangle/AnisotropicDyadic.lean": {
+   "source_sha256": "3e0e5504be54551d469256da9c0b39891246ba09d776d21cc8cec3eda80ce6bf",
+   "ported_sha256": "3e0e5504be54551d469256da9c0b39891246ba09d776d21cc8cec3eda80ce6bf",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/AnisotropicEstimate.lean": {
+   "source_sha256": "8723a4718c3462929c37ba2450c00a55cf970fe1aa5c5355197364bcbffea2c8",
+   "ported_sha256": "cf321b92482d3c24435c05ab6149091a7e6a23a60996b698128c139e2e6e2164",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/AnisotropicGeometry.lean": {
+   "source_sha256": "05dfa55f0eb1e282fb7d9ff0f6e0c20379f363018a28c6e72d2722fb3cb4658f",
+   "ported_sha256": "20c1e51c2c2911613d1f0ac6412d19267f479794d6e15d733f152f001adb7ce2",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/AnisotropicPlaneData.lean": {
+   "source_sha256": "2420393a148ba6f11ddf0f0341bd59ef635b376b85c2fdf7105333a68756325f",
+   "ported_sha256": "b91f64989692253997bb357896ba4915cc13e91e049f5ad71e5485ebbe3e55f2",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/Auxiliaries.lean": {
+   "source_sha256": "0087bb095018dd8b884ef87d7e199e60e7b99a3d2fa0612e1ef0ee2e54009694",
+   "ported_sha256": "f1d6fd4d7630e551b39bb3f397a21d07ca0d7d49fa2c951bba81ed665a24a291",
+   "imports_rewritten": 132
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliaryAffineWeights.lean": {
+   "source_sha256": "8ce74dae41b53987cfd28dcac81f79ec61b7d01e50474e4c09ff331f2c87ae88",
+   "ported_sha256": "33d94af3e6e9f647abd97052a01ebe9d52e8b2cbf67b8499138e9fe86ac6d6f6",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliaryCap.lean": {
+   "source_sha256": "0239ac368733b2b84be063c8a28175002928a2f1ddbc0e277da2ba1386e48318",
+   "ported_sha256": "0239ac368733b2b84be063c8a28175002928a2f1ddbc0e277da2ba1386e48318",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliaryIntegralSupport.lean": {
+   "source_sha256": "d38dfd9c13847db7b5f194f1e93cb4caf94e5bc93be64c692ad96a8ddcd86eec",
+   "ported_sha256": "feb7799afb76709d07641e15963e0739d83c9605b0448773d465d41e47c197a6",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliarySamplingLaw.lean": {
+   "source_sha256": "4c5c0cba969b1fd98a65f9b8e8d217b1125219345b478225109f21f748e66f9c",
+   "ported_sha256": "2ab66bd0fd45629a19017143dab5e0c3cc9154a7d2e3321144f3330e26e89a96",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliarySamplingParameters.lean": {
+   "source_sha256": "a14681e6ff429fbc691518122e563ab885215425c918cf3eeb6ad1ad68f2ddc9",
+   "ported_sha256": "5879c841c9718962b244b5ae22f1721efe8fc4698cbc90ac97cee287247c25f6",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliarySamplingSupport.lean": {
+   "source_sha256": "74c25269b9eb314a75a9a917750c0182cf8e091c2dda6661f40d50997e3201d9",
+   "ported_sha256": "6f2c0aaf957ded9e7249db23e11c45c67b0e9a51d1bfa660061e1de3c427353c",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliarySet.lean": {
+   "source_sha256": "eb277f68258a1df3502967df7b1f38f3bb49f2f84829a88b5bd27bfbdf1a87ce",
+   "ported_sha256": "7c04a2f383aac169ee23d6d89aa9a8f83c42b0ac4d9ec90a5b41539785409396",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliarySpecialRankTwo.lean": {
+   "source_sha256": "de8116ab5b6012b03ca55b620d4faadd7de68a09e6be48977cba36fc9286434f",
+   "ported_sha256": "41b21bf6fd13ccc66e01f442d9f35a0386b1f5d46dba700359be31f599dd3ed2",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliarySupport.lean": {
+   "source_sha256": "e77ebfbb713b647d6f3dd3c28fbf2fa0ac08bb7fd3a78a39e28c16d162c50b53",
+   "ported_sha256": "e20b327ab0f6b4ac9b2ef7419b7f3bc1c5ed1ca80b6020a45f15e771fbc9496e",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliaryThreeCase.lean": {
+   "source_sha256": "39e04640c776b3df987dd83eb9e68b2e33d057056cf9fe8457e548fa9c0e77bf",
+   "ported_sha256": "d257ec375ace8cb449d02cf824ec55305415eef20262901e69873e937377fde5",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliaryWeights.lean": {
+   "source_sha256": "6eecfce33efd1e4e8d15bf1d4609410793e7dd89e1a6c74134f3b5f956530bec",
+   "ported_sha256": "e5d1b8a0835ab562608f0fa46a7a92a81091f0475bf260bc04b2483b2e1fdd7f",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliaryZeroCount.lean": {
+   "source_sha256": "c0833ee6eef3540e75be40064bdee48b6aedeb70efd11cbfe9d8e51e6f7399de",
+   "ported_sha256": "07608d1d33cb6acda8733ce01847f02021c3b4b8e4c3bda4b7eb7bfe1b41088d",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/AuxiliaryZeroWeights.lean": {
+   "source_sha256": "65a06940b07269113cfe54b6b17b7b40aee0386c7115a403723e24ee4d4d3b99",
+   "ported_sha256": "6d972bb6afc7c0c919f38c5496ad84c647ec53a075eb257ba8aa2432ec895cd2",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/AveragedBadTripleBound.lean": {
+   "source_sha256": "6cf71acc77489ee61f20f93064fbca35b56e713e3dc8dde1f9bad6988defd63e",
+   "ported_sha256": "f4c83d51cd6232a581c2d19f3d59f9d86f5f39f31c1e3560458624503b37a1b1",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/BadTripleAverage.lean": {
+   "source_sha256": "885ee73c64e6039dedb362249c1cb58432ce3d778cd2bf59c028015735ed73eb",
+   "ported_sha256": "f5ef2a0c011bfa29d3eba2bd90d0e44d5956cdd8059951cc6b94e926289b8235",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/CRTLifting.lean": {
+   "source_sha256": "b3fc651e2ae33111fa852cfbc682b4387bf14b0e0b8b6a9c126fb0c11eac3d5d",
+   "ported_sha256": "b3fc651e2ae33111fa852cfbc682b4387bf14b0e0b8b6a9c126fb0c11eac3d5d",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/CapInBox.lean": {
+   "source_sha256": "5afd17a47435b9c76b7560bdeffd037891f396eea53c03ade1578ce81dd339aa",
+   "ported_sha256": "c9d0e3bd64e31fb7b3d209d4176865ce400dc7c306e8fa7cdd29e3555f9b1d54",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/ConditionalBadTripleBound.lean": {
+   "source_sha256": "85a67782686841bebd0e2200b01d73506bcd5124e65ea85ef74fb792e1984ff9",
+   "ported_sha256": "e7f2ed3db49615c6a40ffaf4efb82abd009f4f38edae74bb96ecefe848056d3a",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/ConditionalDigits.lean": {
+   "source_sha256": "b83963128cc0ab8bbbe285bd1adaf91faf28e9e7b6a42972ac07280dec2fec38",
+   "ported_sha256": "ee4d8a3cf4e83756fe8c9e7c70f775eb2cca2ca94e6033f33ed75c390230cd3e",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/ConditionalMatrix.lean": {
+   "source_sha256": "098fc83b42bf6e8a21ab380a7bd2d2b5ad0283f7eebde642b0e11f34af2d03c5",
+   "ported_sha256": "2fe7ab8016a2a87a9e23e0cca09d41f12128865a9c9127fb0234c1e8387e7cbd",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/ConditionalSamples.lean": {
+   "source_sha256": "f936a77a526465cd6d1c2b61ab3d96b98a5165fabeb525341b60996dd3e097f6",
+   "ported_sha256": "f936a77a526465cd6d1c2b61ab3d96b98a5165fabeb525341b60996dd3e097f6",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/ConditionalSmith.lean": {
+   "source_sha256": "66acb18755d4c3fa06856dabab7e900896190cf89df9383cd0f47f5ec45e50c1",
+   "ported_sha256": "abaf9cef98e661009590909731aeece62a40f6c2040f6e02a7a6eff82dbfbaf2",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/CrossNormal.lean": {
+   "source_sha256": "40c6a81e547e36c3f87f889f87c983de00baf53c02b303ce69990a8231084a1a",
+   "ported_sha256": "14baf482931f8a74532c5b741668bc4a99fefaaed5c6f150adce4196c1b324aa",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/Definitions.lean": {
+   "source_sha256": "e0d75ecc36327321392b4d3c8f08cc7ecfcf678cdc47ccfde314fb8dd9c9196d",
+   "ported_sha256": "e0d75ecc36327321392b4d3c8f08cc7ecfcf678cdc47ccfde314fb8dd9c9196d",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/Deletion.lean": {
+   "source_sha256": "394d961b0af03593e9c47b2b738a340eb000e2d145af8a6f72c178496431a259",
+   "ported_sha256": "394d961b0af03593e9c47b2b738a340eb000e2d145af8a6f72c178496431a259",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/DesignatedCoefficient.lean": {
+   "source_sha256": "0e31471d53afc7f9bf9ad3a422458580249c724568d634d9105ddf8bef7e7121",
+   "ported_sha256": "4032d58394b6645ebceeced1cdf58160ca4692deec464e6c556a25697ff3d739",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/DeterminantCoefficients.lean": {
+   "source_sha256": "eb8a7a18fdfcec269173c255746be1686c31d755df368601e70575aed2bfcb7a",
+   "ported_sha256": "eb8a7a18fdfcec269173c255746be1686c31d755df368601e70575aed2bfcb7a",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/DeterminantFibers.lean": {
+   "source_sha256": "1b7486c0c698d38dc35124196b785b88d56da402480a72449b444b14124c6c7d",
+   "ported_sha256": "56df89bf4dddd9a4d89773d93386c18ab11ff8dbc6004247bb907d72afeab2b4",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/DeterminantResidue.lean": {
+   "source_sha256": "7c99d0edad5a7db8388b0870dffc11b5ea484075cfbe17b15cfbab900aaa691f",
+   "ported_sha256": "7c99d0edad5a7db8388b0870dffc11b5ea484075cfbe17b15cfbab900aaa691f",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/DiagonalDetImage.lean": {
+   "source_sha256": "675a05076b22d918927d8177decf92c2630895ca4c510083805fa67d89925709",
+   "ported_sha256": "fb47b2c7d483de729d101c9a45b16acc868b13909fee833f7325262c84f2894c",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/DiagonalKernel.lean": {
+   "source_sha256": "ad43b1a38b8269f09b87e13150bfc6894d7253af63bfa94af8404ec378035c60",
+   "ported_sha256": "b3e1bc0be3f721c1c71574184b39942c990d5061ab045d90ad16b17353ac309e",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/DiagonalStabilizer.lean": {
+   "source_sha256": "85b71da47e4220e99db02abffa3977cfd4f6d84177213fe016717f400e67a549",
+   "ported_sha256": "85b71da47e4220e99db02abffa3977cfd4f6d84177213fe016717f400e67a549",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/DigitBadTripleAverage.lean": {
+   "source_sha256": "bab31d0e3a0927696f3664e54ad5f0323326adbae7ec51a071e50508e08714d9",
+   "ported_sha256": "9c9cdd1b9af8499e73e350b6782f0442f21a451c2aa2568d21a5dde3cc1ecaaf",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/DigitColumnLaw.lean": {
+   "source_sha256": "4a3a3e336a8554b43c1afbba8de1a0168d4707921cec1ea0d0672302d7ff8e0b",
+   "ported_sha256": "7ca8b1cc9547e1794501271647caa2bf42e830df3d1e071af7df7d655ed2a0ff",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/DigitEncoding.lean": {
+   "source_sha256": "bb93a152c37335c98f506fa57c81f551a653b13d4f1b7a009e6d9117569dbe0b",
+   "ported_sha256": "bb93a152c37335c98f506fa57c81f551a653b13d4f1b7a009e6d9117569dbe0b",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/DigitObstruction.lean": {
+   "source_sha256": "869ce8c26772a190447ba6fbc5b3a6e5f1d591b571812cbcb3e5a3294df35428",
+   "ported_sha256": "869ce8c26772a190447ba6fbc5b3a6e5f1d591b571812cbcb3e5a3294df35428",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/DigitUniqueness.lean": {
+   "source_sha256": "c389e9461f4ca65adedb774449b6f044f286f1c1d1021945e0c1a8eb247ae3eb",
+   "ported_sha256": "c389e9461f4ca65adedb774449b6f044f286f1c1d1021945e0c1a8eb247ae3eb",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/DigitUnits.lean": {
+   "source_sha256": "1f183d41faee64333c24a41b12741784cbb0cc1bf09eb45cd2962403992d0811",
+   "ported_sha256": "1f183d41faee64333c24a41b12741784cbb0cc1bf09eb45cd2962403992d0811",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/DividingPivot.lean": {
+   "source_sha256": "2d0917cbed81997fa44c1c7f4bab0173ebb2e499dc184221f298220cb62a19a2",
+   "ported_sha256": "2d0917cbed81997fa44c1c7f4bab0173ebb2e499dc184221f298220cb62a19a2",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/DivisorMoment.lean": {
+   "source_sha256": "acd755c465a8799def0c89be7e93c4273eeb483a171f2c69e2c0d2f5bf16d449",
+   "ported_sha256": "acd755c465a8799def0c89be7e93c4273eeb483a171f2c69e2c0d2f5bf16d449",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/EncodedDeterminant.lean": {
+   "source_sha256": "f27eedb4f28e65cf378ebde65a1d10b608d527f8a6d8bb2f7f7b376656f6be77",
+   "ported_sha256": "7153d8529175b953769e61d33d05df4b6ff92894b24f7b55dcfc1d8ada5bac3e",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/EqualCoordinatePacking.lean": {
+   "source_sha256": "f29ab146e56e14ecbb0034fc5584e8d5c3227cc5c089f4ad0cc12afaacadaff5",
+   "ported_sha256": "83d9f52d2ff8d162bd7aecf3553f94a3af1ab6462df655b8675afec6fb0df0bc",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/EqualCoordinatePlane.lean": {
+   "source_sha256": "00ccc244dd3cdbc6aafcbe9f8ef22b79186aac99d9ab1b1e6f63b9fa0b8f5b0e",
+   "ported_sha256": "6e9f64e175cbdc9aa1190dbb640af26a9f54d59614ac50df31601cb6bb842a61",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/ExactPlaneCovolume.lean": {
+   "source_sha256": "8055c291a818f1a4ef0a8e0cf900170c74cc10ac8d51bd796fa67aa9fdec6b0c",
+   "ported_sha256": "d47fa4d842fe3f9ef4f47156ded89e49f09c8f19ab4baca85df3fab4c1b8c972",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/ExponentScaling.lean": {
+   "source_sha256": "2a1457a1d281bb7d2bbf75b5471527c5619df781babb939f37a72bfcf1becd93",
+   "ported_sha256": "2a1457a1d281bb7d2bbf75b5471527c5619df781babb939f37a72bfcf1becd93",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/FinalSampling.lean": {
+   "source_sha256": "6d3f2d464c912ff9aa0eae40ab681112b1e81fc0c5773ab7b8181352755028fb",
+   "ported_sha256": "6332ebeb35f47396800d99de264dee8fa59fbd17d888e52db06d5732dcc4451e",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/FinalScaling.lean": {
+   "source_sha256": "60bb1ab9df08f1dae1a29dcf1aa0e8d518c7998f72832295f1b5f4a14edb729e",
+   "ported_sha256": "60bb1ab9df08f1dae1a29dcf1aa0e8d518c7998f72832295f1b5f4a14edb729e",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/FinalScalingBridge.lean": {
+   "source_sha256": "ba012ec172dc1b8bcc1ab0f19d9471eee32d8e117d242b4147b93c20e08fa270",
+   "ported_sha256": "85aae2cc75bfafeeaf61cec59870a44d9023ef0bf6481af524019beb5275e2e2",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/FiniteFieldLabels.lean": {
+   "source_sha256": "d3b1a500a642af26b137f7c7a52c8b16fb62b9549a0ee13675cd33c809eab6c9",
+   "ported_sha256": "7d53df27a09ec70155b0d1e3f79bc8d8a760dd5f4108ee34cb6db958f7a2a8b6",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/FiniteIndexPlane.lean": {
+   "source_sha256": "17c8d43678daacfaedcd02e0545dac0c85843331c835433125d9e696a637614d",
+   "ported_sha256": "16b6b138e3a6359fe36f5e201033150085502ba6f394200ffc47d6f4e0b4f64f",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/FiniteMixtures.lean": {
+   "source_sha256": "5d4d60e85a5ddaa216b5394380f5d389cd9fd1dee861c67b9b56eb96621a0494",
+   "ported_sha256": "70a9363527c1b6809dbfd0fdf2c175266affccd10d179a5a2edde8260b697b93",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/FixedDetLattice.lean": {
+   "source_sha256": "06fcc255c9b41080590eb40bb78fd7c0d8ca4736fd8c2bee5b33661ca1bde825",
+   "ported_sha256": "8731bb2c33e0f381121216f486ed803c455bdeb0f6a199a51052916eae5637a6",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/FixedDetReduction.lean": {
+   "source_sha256": "5af1cc7fd398ed247318f0f4037f4cae5c2918542db9badedc6eea545a9d393a",
+   "ported_sha256": "36c2550fdf4f22587c7b9ed0ec8ac2b45f6d87582932972cb537b75b11e88cbc",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/FullIntegralLattice.lean": {
+   "source_sha256": "1ad1c469d05e2bc18e20791707325f8fb5addeaad4285ee56166bf8a24834a25",
+   "ported_sha256": "5aa6e976f4de7029134c5faac50dc7d2dad04928d8b18e44c748f898e3ff84e0",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/GcdPairCount.lean": {
+   "source_sha256": "e73b54963e5880161436a5ede1b01d5d45283696a922177486f9bc9fd4ab84be",
+   "ported_sha256": "e73b54963e5880161436a5ede1b01d5d45283696a922177486f9bc9fd4ab84be",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/GeometricAlteration.lean": {
+   "source_sha256": "c3378f1894190aac832a5078cc2ce46a7f7e31e67eb0d2a1e6b3a0dd89065b82",
+   "ported_sha256": "ac330beb9954279c2881ebb38096a158b2bb6a36282861977daa1f26778ab241",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/HomogeneousGeometry.lean": {
+   "source_sha256": "aa5633cc3ec824916af24a190d79c27505f71f14ee148c827bdcd07bd34f2aaf",
+   "ported_sha256": "7ef72d2e68085d79d1271e0de8046beff132546b259c195c7e3d8499f600921b",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/IndependentColumns.lean": {
+   "source_sha256": "23fb5b508f46e21d548a91918b7d501748deeb687248878144507c270a16c2da",
+   "ported_sha256": "23fb5b508f46e21d548a91918b7d501748deeb687248878144507c270a16c2da",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/IndependentTupleCard.lean": {
+   "source_sha256": "2c2570b6916f60e0021e89dc2b77deae2ea4d6877198ae375fce27dcb0ff01bb",
+   "ported_sha256": "2c2570b6916f60e0021e89dc2b77deae2ea4d6877198ae375fce27dcb0ff01bb",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerMatrixEvents.lean": {
+   "source_sha256": "bf59d614a3d43d74d18855ae99381bf724affe3361e4a76234e3143aa2420089",
+   "ported_sha256": "dc41865b1da01cc009b017a9c2d0a8c84bc6b20cdacda1875caa8a4a6a0d8831",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerMatrixFibers.lean": {
+   "source_sha256": "4602a32389588f3910ef3d6deb4ba9ccb361a61240f4be7d17bd80eef425e4c0",
+   "ported_sha256": "6ce28749f5c4240e21d4dc48c38e7f8ba289a3b2c1b6a37b8b8b8bd171d8ed81",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerMatrixTransport.lean": {
+   "source_sha256": "3b9a03388c2cb1443b42c481715fe753276a2592f66121e30cf78c4bbafdc3ad",
+   "ported_sha256": "9eef06d4ff96215dab6ab58cba06bef49959e467d954053043b9efa806130022",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerMixtureGeometry.lean": {
+   "source_sha256": "f62716fcb9185274698895ce80396a2e9cb2053f3155f8ddd8e48015de3fcfbb",
+   "ported_sha256": "4f93cdc467683986946b2c14c13517de5343fe3cb48562ebb515b7054088e658",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerNormalGroups.lean": {
+   "source_sha256": "6e975eba875568b3ced0e29dc87c6761ad937e56cbaf079d3884f9c74ba12379",
+   "ported_sha256": "bf3114630481ce42caf260119a83ea2607fbe9400b236fbbd2e5308ca0564c25",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerPlaneEstimates.lean": {
+   "source_sha256": "b99a18abb0b02e2fc4058a1c15740cd3c27b9122203f8b6b3e5391dbea77479d",
+   "ported_sha256": "8061c2a5df723080ce1fa4b8d078db4f11780187353aa966a00b95bbd47ca0aa",
+   "imports_rewritten": 5
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerPointLaw.lean": {
+   "source_sha256": "ceff4622a3a9758236cf1b9d6c266eb2ebf4d9ed724cc6524234f09fe3b3b72d",
+   "ported_sha256": "50f46f2c405df58f27de4d2f75b93e5de83374199c19f56cd69a22b20a11bc08",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerPointLawPairs.lean": {
+   "source_sha256": "5fd744368d83e3f2111f68d987cc213828a6e2ef9f5f573cec62e34eca106a1e",
+   "ported_sha256": "a7ce0331883c64e061b3946e6c83c28f4343d51cdc115531b5ea3e6c2624ef85",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerPointLawTriples.lean": {
+   "source_sha256": "5c2c44c613a8d6526f4eefeb567a10fe3e212c1b8c5a05087c7461595ada4ec1",
+   "ported_sha256": "6da416a510afbfbdd7d14331b67eaf7775aba06c3c8f0bcb99bca9b6f265d527",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerSampleMixtures.lean": {
+   "source_sha256": "eb517610a005d69e80c16aeabdf5d01ad859fd0096e2781b221197e61b4630a0",
+   "ported_sha256": "54ef0962e0e49c508f492ff6a0c6aebb4dae6f6ad86e80fc80573558105af41d",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerSampling.lean": {
+   "source_sha256": "bcf2f164535f0ceaeb9268f3e723e3013437e5a19cf965b5ce377201fa7aed3f",
+   "ported_sha256": "e5004b647ae9f3dc39deed857783906fb1c71434a2b8425911dde24e0a5880e4",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerSamplingGeometry.lean": {
+   "source_sha256": "24400d6bafbc8b320398a3315861a7fc327e91bdff6747228a0029a428685d6c",
+   "ported_sha256": "2c07fa11f9752efff98caebf055276834d317061f2a3777d0c5a47bccbe5a943",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerSamplingPairs.lean": {
+   "source_sha256": "a7ec02efb32b306bac92d1b1e452355b04ca590706867ec67132c03d597e42ce",
+   "ported_sha256": "01ffb52c09a3f27fc4a78035e8552f2bc5cc3b74fd8e911b394f2b1c3ca44b8f",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegerSharedCollisions.lean": {
+   "source_sha256": "66dabcd863f3e2877e6512b5784d6694aaf921da58067b073d49a1186a317be0",
+   "ported_sha256": "acbd1c2f75c48d3d5ce9e9dd8c306bb33174981a32b8eaa1c46c312cc80bd7e5",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegralAmbientLattice.lean": {
+   "source_sha256": "27d4e879385f7222a18027b1dd58f3cd50f74095c3207372f7d3923169aad3d3",
+   "ported_sha256": "9fea6c6089c03812196bfb96b52563e7afb4360b8b8ba080ae7dc547a06777f3",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegralKernelMoment.lean": {
+   "source_sha256": "2474d3ae3a293af85615a3be64b454cb343fa74ada885592f95714bdb849963d",
+   "ported_sha256": "fdc026b3ef8bd57820fff4ed9c2bfed9f8b032f40897e12a37b57824775acce1",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegralPlaneDeterminant.lean": {
+   "source_sha256": "f9b41ccd0e9d10143e8bce9283d7ad84f6c1ad7a382f7b6c1a611ea2931da5da",
+   "ported_sha256": "4aa9c05eecd8a7138918573214cfb50b7b1edbcaff90ac293cbdcaf5a7e5aa00",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegralPlaneLattice.lean": {
+   "source_sha256": "ef556f36861c0e2f1fab21302f5c174ea025b4557859a94ec6dda90db27a1749",
+   "ported_sha256": "ef556f36861c0e2f1fab21302f5c174ea025b4557859a94ec6dda90db27a1749",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegralPlaneMatrixCount.lean": {
+   "source_sha256": "3cc264616fabf0e1f8aa09c368e9bdf8de205c98672925a84967cc37b8ea9201",
+   "ported_sha256": "33454c67ad1ac1b4cc7f06292ad404e99b9560d8ce7667a0d7bed4c591f9a862",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegralPlaneReduction.lean": {
+   "source_sha256": "5b3fdf85c15acf7964a4361ab208fb0a656342a543901201ef3a87986a2e6a3c",
+   "ported_sha256": "94b8969d6501f60b29bf2d0b0b8c2de8b4c09dc5f1484cacd1848b21d66da37c",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/IntegralPlaneRows.lean": {
+   "source_sha256": "87583bb4932fa9a1f5aaf1ba1feeff2019738ad0001e76724a8e526c4395b8a3",
+   "ported_sha256": "7b53fc869849d018afa091e96ad0c34a4906f590d1f6c0222dbc3b3193dbcd0d",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/LabelResidues.lean": {
+   "source_sha256": "37daac10dd3e53b2445b84731a5f6888e897ad309b94a8deb3b9a6d2b699683a",
+   "ported_sha256": "b5bea34cbbd3e1b85a68cb7608f1a91be68a37d0e4b9d9639075e26ba5d5507b",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/LatticeBox.lean": {
+   "source_sha256": "24e144f20eef72f993423b8a09e9a76d497640a90052b677d5fcb5f63305e97f",
+   "ported_sha256": "24e144f20eef72f993423b8a09e9a76d497640a90052b677d5fcb5f63305e97f",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/LatticeCoordinates.lean": {
+   "source_sha256": "a19f034c04ae42816d454a04c9cb17fc52618123c41331c43bf114f5e23f9d64",
+   "ported_sha256": "a19f034c04ae42816d454a04c9cb17fc52618123c41331c43bf114f5e23f9d64",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/LatticeLowerProduct.lean": {
+   "source_sha256": "29f1260927155bfdb91ca14a1ebfb9c2cce3c3555fa2c6ab96ef141cb75363ee",
+   "ported_sha256": "29f1260927155bfdb91ca14a1ebfb9c2cce3c3555fa2c6ab96ef141cb75363ee",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/LatticeMoment.lean": {
+   "source_sha256": "091efcfa89860b724f7ec7f245f8f30c8363cf294909b02b7575d233cae83273",
+   "ported_sha256": "c9cac1422b75d1377c89df66603e244f0e462ec0e681d7c87189d52343910000",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/LatticePacking.lean": {
+   "source_sha256": "eeb93c89e581b6c73acb9a4f72c5114c58ea3b1fc891b2980b6ab703d00693d7",
+   "ported_sha256": "eeb93c89e581b6c73acb9a4f72c5114c58ea3b1fc891b2980b6ab703d00693d7",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/LatticeReciprocal.lean": {
+   "source_sha256": "67dd4a41989edae551de095461c5233f523aa409b642f93aa5019a180798e807",
+   "ported_sha256": "9bd32d8689eaca63b48bdd0509ee2b7f9977f1dbe10604b248ac604da83d9a7c",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/LatticeResidues.lean": {
+   "source_sha256": "495f7c642b32ef99c896f10aeb9408c507bdbdcec8798c618b83c8ca523eff73",
+   "ported_sha256": "495f7c642b32ef99c896f10aeb9408c507bdbdcec8798c618b83c8ca523eff73",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/LatticeShell.lean": {
+   "source_sha256": "a679bce9a10c05f56e4b95056c13c8f5231686df2b147c398e12e9f7afc46083",
+   "ported_sha256": "a679bce9a10c05f56e4b95056c13c8f5231686df2b147c398e12e9f7afc46083",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/LatticeSplit.lean": {
+   "source_sha256": "ce278e5d42dc7c9adea9b148577f028571acfe6379c17e7a29a56bb27f66f731",
+   "ported_sha256": "ce278e5d42dc7c9adea9b148577f028571acfe6379c17e7a29a56bb27f66f731",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/LiftCollisions.lean": {
+   "source_sha256": "90163f2309025b536206879964d24605cfc26ae8b9a5be187674d1c0bc64f352",
+   "ported_sha256": "efd7b2e3c15f8a3a52c517b58ec36958c60a87f729a7c2ae3fc91ac61119c94a",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/LiftedBadEvent.lean": {
+   "source_sha256": "e0b35f283f4829a1ba7d1a50c4f5f98aae5038c11fa799580882d88b2e26654a",
+   "ported_sha256": "ad9b2deb70b2e4feefdcb9c1b4d47b546dd1e4c5ee6c0ef423299c78fc1b4d31",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/LiftingProbability.lean": {
+   "source_sha256": "3cb5b21284f54f6375838776db76994dc7fbf7d8a11a89a546fb855fcc9ce07f",
+   "ported_sha256": "3cb5b21284f54f6375838776db76994dc7fbf7d8a11a89a546fb855fcc9ce07f",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/Main.lean": {
+   "source_sha256": "19c4c5eb28c81636eb1e9aacd19a9475fe7a8eb5a0ead110944f66a9f366265e",
+   "ported_sha256": "e7ae977f49a5e0b14dead4714fb75314018480f9822bac1bf80ec866e3af53bd",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/MainDigitBadTripleBound.lean": {
+   "source_sha256": "7a612cacc50cb748b4f8712d6ef0a7d5a25ec3d2021245888cba9a0747011519",
+   "ported_sha256": "e2c3499a3bfa6c32fd6fd98140f26b691a503b09955c80c79f565e49bf0be588",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/MainDigitCollision.lean": {
+   "source_sha256": "2a4fdb76ef9ff19eddcbd05e736eb6cfd4975d92c16be427f023382de87440e4",
+   "ported_sha256": "68e98d7e4403a3dba9a057bbb8afd609244b18c5574be3f078238eae23caf8ea",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/MainDigitLaw.lean": {
+   "source_sha256": "d2f5460d68787ad57c896893c8c765e188c083c7c1f8d09e430886a24340bedd",
+   "ported_sha256": "2c450f21c055544be2c9c072fdf656dff4217d0b27ce26932f728b632f489897",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/MainDigitObstruction.lean": {
+   "source_sha256": "af02988d5dcae307ffdd26230610c2f148b7304b537994d65b0b6bc52fea025a",
+   "ported_sha256": "55c576ef65a94c9fb41e17dd3740c20d3bd417447902d6a01f42a7c099e5337f",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/MainDigitOrbitObstruction.lean": {
+   "source_sha256": "73bd0ebb888b4627d0d8d2ec19e3c38d1d57a28d54a85eaba2477bbbc9db9877",
+   "ported_sha256": "cde709cedb81e197adf8145a5d5141ba889c632b39dabefd737145101b41eaad",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/MainOrbitObstruction.lean": {
+   "source_sha256": "21c56fef4b9686165100c9b70eb7936201b57b6730ed3e32c9a20fbd2e8dd0ac",
+   "ported_sha256": "db0bd6c6126253c50215a8aaeecd03acc93235c9fd0cd7f99b4badbff51743f6",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/MainResidueSystem.lean": {
+   "source_sha256": "3d3141bfd051a44368d9ee23a7b2618480fd3dab475377207bf3bee9514664e1",
+   "ported_sha256": "cc5253ab897c2b670c158038ad17084c87d0ebf646caa48dbd8b2a9c13a39dbf",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/MatrixAffineShell.lean": {
+   "source_sha256": "fcb3c5f610459fb2dec3270a80136c838ff5f96925f289dfecca63e66e0f5c89",
+   "ported_sha256": "387006a5f5fab1eedf673219a8dc43d1e6e316f03c266ffe62d11b5f49574b86",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/MatrixAuxiliaryWeights.lean": {
+   "source_sha256": "9a36d2efc1a740eeb940a499c4669efb436a63b9ad215666ccb901d41b884b9c",
+   "ported_sha256": "8abdf2c41f8f483b3e1eb8c78cea68d6441dab4552f97aaced87be4e214bf2d6",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/MatrixSpecialRankTwo.lean": {
+   "source_sha256": "55fade8b38dff9f19f5dca4d4db36a7a4fbb6441a9f7748f598efbea76681c29",
+   "ported_sha256": "a60b22795a569ce86d33ae7bfe200e3bd47c0630bbc427ae54a01b8e9446c973",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/MinorInvariant.lean": {
+   "source_sha256": "1203f83764f174b33c3b343475f0501bceb0120c9b654ad7ea41c248033c0d8e",
+   "ported_sha256": "d1d347fd8016d45d7c2aec39d1efc96fc2577b85d828e31b29569dd9ecc291b4",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/MixtureLifting.lean": {
+   "source_sha256": "4d9d136a0117c2128c656ed540888624b91fb340c4c3047322491023768bd5fb",
+   "ported_sha256": "75d77e0a296ebaef3fee3dbdba996dceda2a3011abb7b1893723cec24f5e6d33",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/MonomialCount.lean": {
+   "source_sha256": "bdb3e90a59a958be463a69c156c84d231c84f7c68aab644d5118a1cf1f738ee2",
+   "ported_sha256": "834c7900917e53f43af829a34607204653eb5aa9b3e3bbdc6e3001112be5372d",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/NonzeroAuxiliaryCount.lean": {
+   "source_sha256": "67ae549eb0336db114bbdeba43ac01f0774c85ea361fb67881406642ca309ea6",
+   "ported_sha256": "f000a15a725dcb253721b4f1bed66655d38ee1754dd202249b9e0a95f3dcb900",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/NonzeroWeightedCount.lean": {
+   "source_sha256": "de60cfde85e2e26bf14ae03bd3ae113b1b0b15db1e048a9ef203a82033f233c3",
+   "ported_sha256": "a1d66942439a6e064dc0521c56cd2a9d71cd5dc22ae8ee61937330159dbed536",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/NormDecomposition.lean": {
+   "source_sha256": "0063241c285f21dfbec30ab16092662dda79566cae285c791c90725cf312fa86",
+   "ported_sha256": "0063241c285f21dfbec30ab16092662dda79566cae285c791c90725cf312fa86",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/NormDeterminant.lean": {
+   "source_sha256": "8a17b48c7e8e81f7f97253782026bdb5f6445d28e58e5ae9f561cf7602e62566",
+   "ported_sha256": "801119db3bd9502be22c07bace933b42c6d7ec134b6dd11d381c80b43eadfb9a",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/NormEncoding.lean": {
+   "source_sha256": "b25549921557c3c10b7f090ce46dc811ef4245a21445d41f0c1a62ec0236af1a",
+   "ported_sha256": "92b7d930c2d47ba8998fe2657ca0cb8ffb31beb5db46869b52dda4d8c72598a1",
+   "imports_rewritten": 5
+  },
+  "OAI/Geometry/HeilbronnTriangle/NormFoundation.lean": {
+   "source_sha256": "b3703d0dcc9591fc1bc7bb45cfc25bd0d84667b2840a94c5dbc1565137b86077",
+   "ported_sha256": "b3703d0dcc9591fc1bc7bb45cfc25bd0d84667b2840a94c5dbc1565137b86077",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/NormHomogeneity.lean": {
+   "source_sha256": "415225dde656ea2b7307bd1bd9f9bef950c80813798f68727703c802c0418a44",
+   "ported_sha256": "df213759fe05d2d79fcb74df3ced20a370f538b1850e64f40af5c971e4d6feb5",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/NormPolynomial.lean": {
+   "source_sha256": "358c66042ac52e4038acd3a1bc2668981fc0b9c39b03300c826e72d8a4ccdf13",
+   "ported_sha256": "f7067c4ea31aab42b4c66b701f28b4de892a3175461b80974201a2fc47645bd2",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/NormalFiberCount.lean": {
+   "source_sha256": "8794fc4bbe18e709e2bbb82ba11059c44ec21ee14e327d5dd7ed2e9d62cab016",
+   "ported_sha256": "a1f74c8a826025a37db78c8f50aa8fd917786354fcca870398c3556514458d56",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/NormalGroupCount.lean": {
+   "source_sha256": "bd646fb4f1028df91b1dcd82715a86153545377955ee0022931e40a64c5e1d0b",
+   "ported_sha256": "679dae8388a938c23254fc23ddb43c13bc0db1a00d77acd252e46aaf3dc33fcf",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/OrbitCardinality.lean": {
+   "source_sha256": "0d5abcb5e12af06a0ed53106730ff880705a2f44600f60fe39d0eb0d9e91a61f",
+   "ported_sha256": "0d5abcb5e12af06a0ed53106730ff880705a2f44600f60fe39d0eb0d9e91a61f",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/OrbitEstimate.lean": {
+   "source_sha256": "5f02afde4272543db7cd2420cd31cedd5584a0884c517b358d013283bdfa7c20",
+   "ported_sha256": "e686797754ef3afa295ecb1f2d97feda4ef477c1e83401ee8d5b41e40013c56e",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/OrbitProbabilityBound.lean": {
+   "source_sha256": "9b5ff631d681af6d81dcd505e91f0491fc69c4c7e5d5a86ca02eb15805014302",
+   "ported_sha256": "c64631118eff3a51ebc6ca87336b1309c40d632e4abda1e277abeaa66045d56a",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/OrbitRowLattice.lean": {
+   "source_sha256": "868fca9cee71dcc1bc3e48f4e8fa30da680d365360a1c2b1dad60d703008d2c4",
+   "ported_sha256": "7a928d7210ea46784c78115cb524d384d0da67e31c1cc55c62603e31843a3a6c",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/OrbitSampling.lean": {
+   "source_sha256": "73d4add05ed063e45203e8c1d5345cddf783d37853321bf01e26b444c69e02b8",
+   "ported_sha256": "c86780840e5ff679bb6f2c7eb9400df888a3b152f01d91ad03a53893fc3c6bdc",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/OrbitSamplingCardinality.lean": {
+   "source_sha256": "8b484ca3114886ba55601134ef0e37558cb887061e899ed3a95cbd9318869dbd",
+   "ported_sha256": "21b184161b97954873a5424aa63048e2067ed8a84bf67f7e411c162cfa713cf0",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/OrbitUniform.lean": {
+   "source_sha256": "ca786034ec645b3ff0b460d08e1d8206289b921c044bfc0f6a9765005130d625",
+   "ported_sha256": "f806ea7ffa703a82c9c3e2cd1ed4e1856ca7c8e6dd980d876b563cb41ef39b91",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/PairingDivisor.lean": {
+   "source_sha256": "c3183e14df9e6fe7bfaf0137708cb9e3a00b3507317aca09b0ed1d1601bf00d2",
+   "ported_sha256": "c3183e14df9e6fe7bfaf0137708cb9e3a00b3507317aca09b0ed1d1601bf00d2",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PairingMoment.lean": {
+   "source_sha256": "e8c4b6f6828de36a6ae210fcff801415880bd7d118ee4977870cc51681e8abd1",
+   "ported_sha256": "2dd48a87f77fcb701e95ac2f194b16a9371603c3d05f531f6bd076e80e9be0ee",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/ParameterConclusion.lean": {
+   "source_sha256": "dd6e3583abbec9ab9097a8443cab752c59a9d5d6717555d5a9617238f452d53c",
+   "ported_sha256": "39d25297188d6e40895a0a92fa338426eb9b5d32f7e5254b0cbc5c651090a749",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/ParameterSampling.lean": {
+   "source_sha256": "cb08df7cd05bafdaed4451b2111641b5cca736291233af88735a4753c2397f5f",
+   "ported_sha256": "8f23c7a9d9eda41747cb64c8296842c8075494522802869cb764d2f572b091ab",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/ParameterSequence.lean": {
+   "source_sha256": "fb10a229bd4513c83e7226b13b3967404686874f89fee85f2d50418af3515426",
+   "ported_sha256": "fcc9d62362cf4b88260ef3ebe581237e92f7126c538bf0420665b4cfb74c2331",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/Parameters.lean": {
+   "source_sha256": "2634c50be2ecadbe9d2de3309d39abe668c762866300b377a8cf10a26a31f5f8",
+   "ported_sha256": "2f99754574202c77385a998a2a7f40e21d64e644959998f6e5fbc44d2b499ed0",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/PivotAssembly.lean": {
+   "source_sha256": "6041b9779dbbb7c561b09d50d1e8f0424857ad5cc0e6e15d40b93161fb560429",
+   "ported_sha256": "6041b9779dbbb7c561b09d50d1e8f0424857ad5cc0e6e15d40b93161fb560429",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneBasisIndex.lean": {
+   "source_sha256": "5a231cc571a81aac35f77a2d7126b876660c8892f4104704ca2dd1243b92df64",
+   "ported_sha256": "78b32e69f47de6822096f4cb25701d4771140b673be4bc256a9b2cf28d0c80ca",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneCount.lean": {
+   "source_sha256": "504404a140615865a384f6ef3e6f6e52a2db3661fe0dead58c55b0d482561a60",
+   "ported_sha256": "993241d27abe7b463df79c63e920ea9ac14fb23965fcc808c6c36e91859b074c",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneCovolume.lean": {
+   "source_sha256": "f968bf78d2697228b2ef223b10d0659b949193eb9da2030380fce01e83514d38",
+   "ported_sha256": "f968bf78d2697228b2ef223b10d0659b949193eb9da2030380fce01e83514d38",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneDeterminant.lean": {
+   "source_sha256": "9dc394499bb5107f631c806c1fdfc24e49059333e0309d168f06fef050198eb7",
+   "ported_sha256": "9dc394499bb5107f631c806c1fdfc24e49059333e0309d168f06fef050198eb7",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneFiberAssembly.lean": {
+   "source_sha256": "045dd6d96aa23e49bd5e579b3faf462670080bbecc3fb2c921d329d609fd067b",
+   "ported_sha256": "c193b5da1a37c63fab3a563beaa6039fae79755ce5475d4b535d511f08f9ec9f",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneFunctional.lean": {
+   "source_sha256": "646502cb0f8272362b724b4a77a4c6e0eb693bc45fa0516b89f182b1ff21b587",
+   "ported_sha256": "646502cb0f8272362b724b4a77a4c6e0eb693bc45fa0516b89f182b1ff21b587",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneIndex.lean": {
+   "source_sha256": "59891949f22b013406329a78a783b652140045b8bc15b10aa795551bf8cf75fb",
+   "ported_sha256": "59891949f22b013406329a78a783b652140045b8bc15b10aa795551bf8cf75fb",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneLineMatrices.lean": {
+   "source_sha256": "5aaad7dc43d9394e425cf0c9ff4afe1496bb5768fcb2296d2b6ef7c76661f6d7",
+   "ported_sha256": "0ccd175dacaf345c2329ea1b6ce0c729f45bbac2f334bd25ba8a0308003ca6ae",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneLines.lean": {
+   "source_sha256": "3f7332b170bbec2bbb4ba998ecdb07596663b3072f6426ee434ef40662d53277",
+   "ported_sha256": "3f7332b170bbec2bbb4ba998ecdb07596663b3072f6426ee434ef40662d53277",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneLowRankCount.lean": {
+   "source_sha256": "aff71f451216d1cf8d1e0d14b3c65b208641739dfbb79537a98479c1a5027b5e",
+   "ported_sha256": "384849fa4752d22f81fd3f83dab0bb2e6caf10f79f535cc82e81a46d924da1f9",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneMatrixCount.lean": {
+   "source_sha256": "1a855a5c3f4ec97d45390d8df7dd2546829959e2d3fe91480990f883cfd8127e",
+   "ported_sha256": "764d793c35013015642dcbac4c96881d7cdc3d98e74ebbd39755249202c63e2c",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneRadius.lean": {
+   "source_sha256": "8cbf8d56d35865fc42ffa453357a75642da2870bcd02aeb3382bd11aa5d2b4fc",
+   "ported_sha256": "3e088b6da6a77b66aefd060b3806e37032d96c571c353c2ce46b09a4ad0c5b21",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneReduction.lean": {
+   "source_sha256": "2e78d59e028027482377467c0eb8715efb90e8f47baa3ae3d92932600c9f636b",
+   "ported_sha256": "2e78d59e028027482377467c0eb8715efb90e8f47baa3ae3d92932600c9f636b",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneRowTransport.lean": {
+   "source_sha256": "3199c59a7ee697a8f2b2104b3ae742a122d3156918585f9bc6e93404527ef4f2",
+   "ported_sha256": "731356ab883b1dc9aa9f0e3dfa7301d36ce674be9cc85b3af963db13a4a280d6",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneTripleCount.lean": {
+   "source_sha256": "8a35c9b9bbadc1cb2443374952416f1c652b56d6fd0d9d9f6edb83ae526e4890",
+   "ported_sha256": "7f3ad82bb1f7eb6bd62313a2ae48cd7dbd0f1cc06832e727630b103ff883c3a0",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/PlaneWeightedLines.lean": {
+   "source_sha256": "0420362567c6a86fd10994baa99bc5cbac79c83f67200c83fea8e68f3c128886",
+   "ported_sha256": "89a2eb7f51f4cad3766036794630a1ad55d196d3ceb8ad3226ada40dc431cb02",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/PointLawBadTripleBound.lean": {
+   "source_sha256": "6cc64748466683b68453566e517daf092a02f7591f0d749e1e1583eba5ac94b3",
+   "ported_sha256": "3f1da9c938d12b1de0b4bff81274539331acd98224411c3b910da2096d31e28b",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/PolynomialCoefficients.lean": {
+   "source_sha256": "b2bdbfc1073f77e62873ba910e50f2e8488f07ef03995a12cf3f2615cd2ce2f7",
+   "ported_sha256": "b2bdbfc1073f77e62873ba910e50f2e8488f07ef03995a12cf3f2615cd2ce2f7",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PowerGap.lean": {
+   "source_sha256": "5506b4ddba82e157ba0310f383e9c36859fb69ac0df8efb22f016fff5d4dd956",
+   "ported_sha256": "5506b4ddba82e157ba0310f383e9c36859fb69ac0df8efb22f016fff5d4dd956",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PrescribedDigits.lean": {
+   "source_sha256": "180c418c19a69d762cfbc6f2ba6455fc34daa2db86a54d44e28e43239890dd2b",
+   "ported_sha256": "605700c3c9d6ab3c8643fd9d647718fd1dc3459b52f1868cb6e04d0c0823c277",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/PrimeLiftParameters.lean": {
+   "source_sha256": "cfc3f4247a1bcd09df4849125b5aa6014170c56b975fa201077338f0d177225d",
+   "ported_sha256": "f0cb64f032d62665b351124af3944c5e3e41383386489010b35ab661e7487018",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/PrimeParameters.lean": {
+   "source_sha256": "745f0909b3a864819c5197652697471805ea75e517cbca28918d2ead69f44787",
+   "ported_sha256": "745f0909b3a864819c5197652697471805ea75e517cbca28918d2ead69f44787",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PrimePowerData.lean": {
+   "source_sha256": "bbd3e2747d56dbd47566c08527eb397caa752f57fa0af24c7150be5f6a85b7eb",
+   "ported_sha256": "f81acd82adbe32e2d326057ec84286d851efb0fb53f9328ccea7e9f7e1da179a",
+   "imports_rewritten": 5
+  },
+  "OAI/Geometry/HeilbronnTriangle/PrimePowerFactors.lean": {
+   "source_sha256": "48fff15a51d8c6a11045c49e83a4deda682e0ba26ffe97adc1293995f02013ec",
+   "ported_sha256": "48fff15a51d8c6a11045c49e83a4deda682e0ba26ffe97adc1293995f02013ec",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PrimePowerGL.lean": {
+   "source_sha256": "96447d83544318abf915d59a31fb2d71af884ec57aec01176e03c912290e6f4f",
+   "ported_sha256": "96447d83544318abf915d59a31fb2d71af884ec57aec01176e03c912290e6f4f",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PrimePowerRowData.lean": {
+   "source_sha256": "f0224b1eef96920735248091bcc5553cf0595e54a2e3f6938c437b3f52161403",
+   "ported_sha256": "a7220cc448f64868e06fa07e0a057fc99c232a5f9062d3ca46166d37a0f9aad9",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/PrimePowerStabilizer.lean": {
+   "source_sha256": "9ae5edb872e8dee68923a7762fc4d341754d218475914750698aeb4226ffb78e",
+   "ported_sha256": "43f14400aebe22a3ae25471cb275551f373765813bdd427bd9005b4cf0072ee2",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/PrimitiveLine.lean": {
+   "source_sha256": "804c2333f582a1978bb94aa4828717692db8958efc7d02f8ee61269b91291f53",
+   "ported_sha256": "804c2333f582a1978bb94aa4828717692db8958efc7d02f8ee61269b91291f53",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PrimitiveNormal.lean": {
+   "source_sha256": "cdb1cd0408303446b339d7016453b676d9a255bef52232d62ba29a8d397129ef",
+   "ported_sha256": "cdb1cd0408303446b339d7016453b676d9a255bef52232d62ba29a8d397129ef",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/PrimitiveVector.lean": {
+   "source_sha256": "bf401e1e717b37f99d349de66ee09288e5f3e4d7a9daac02a026c631de2bc55a",
+   "ported_sha256": "bf401e1e717b37f99d349de66ee09288e5f3e4d7a9daac02a026c631de2bc55a",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/ProjectiveBadEvent.lean": {
+   "source_sha256": "1cf3d64a5a9387ab132e14e1f0896662723875da383550a490aca45b41e4c073",
+   "ported_sha256": "7b1d81457785687b9dec2eba00c9dd31c2411c8fbd5b5c84173fc7f8b27684c4",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/ProportionalPairs.lean": {
+   "source_sha256": "fe6dcbae1978f7a71d072d8e3eb81b15402b5ac39bb812cea74b70c7ce2607e3",
+   "ported_sha256": "5e4d6bcdc7c5892c5da1a18e6fdbcac89306d7443c35e41daaa1bdb8b6ab947e",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/RandomAlteration.lean": {
+   "source_sha256": "3f6d93bb61ac308ae493c499e11c65829a077913a5aeb296d36f5beed9051544",
+   "ported_sha256": "8dcf4208e1a5ac1aa3a1fec1cc1075ef45e24b4c267ac8a3c4ab449c71b1f6b3",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/RankOneMinors.lean": {
+   "source_sha256": "c1596baaec0607cef2ca70b8e8f95248aa7d11a3924a8d13cb878d1289bb79b0",
+   "ported_sha256": "c1596baaec0607cef2ca70b8e8f95248aa7d11a3924a8d13cb878d1289bb79b0",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/RealPlaneReduction.lean": {
+   "source_sha256": "7412156d6e36bebec493622c4fa1b313508f7e3ae659490b48e2eb18f6c26159",
+   "ported_sha256": "d646bb4af202a60bf70dbe3b52b423b9b8bb0e53c10f8c0498aecf4629d6be5a",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/Refutation.lean": {
+   "source_sha256": "4b0e1906a19784ee2c57df9e5bd708daaecb2b8511e806d000c2a80429cce807",
+   "ported_sha256": "68f2b99b2f4c312ba5dc9877d58b2ca434555afc34dffc5a128f9a6f1c8e92a8",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/RepeatedLabels.lean": {
+   "source_sha256": "7bae1cefa95fb540416253b6b62c25bcdd6b293df2e498c7c97e8249f29fce0f",
+   "ported_sha256": "7bae1cefa95fb540416253b6b62c25bcdd6b293df2e498c7c97e8249f29fce0f",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/RowLattice.lean": {
+   "source_sha256": "9dc92e0b0b5eec2272f835d853da9482c0f85fdcf31cf94a1507ca8a4c133676",
+   "ported_sha256": "3eb3059794ed822de20c1be0e331288ad085fc3483a0d54c3f32599854f11c77",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/RowLatticeDuality.lean": {
+   "source_sha256": "7c9d9e003f0147e1e567d7d35d7bf3fb790bf0656516d326eafd9e725981211d",
+   "ported_sha256": "ec5f204377430b298f25cea8be19370ca282531f1c6c3d784c33fd7fb44d6805",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/RowLatticeEqualShell.lean": {
+   "source_sha256": "ab4d3317bf40ded3e23d1bccf2a7a0abfb63e6024937dace442e05f748721ea7",
+   "ported_sha256": "22f75826fb1a529d6847b4913ca3ab4334c0485676e836cfc4f31fa52149e1c8",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/RowLatticeFixedDet.lean": {
+   "source_sha256": "710e244e1c233678b8c795cccf2ee65285c9b72e3f779807008ab850fbe8b2c7",
+   "ported_sha256": "3b03067dae695acb06098930dbb88d0fb0bafd31dfb8762ec26fefb5e1d25b59",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/RowLatticeMatrices.lean": {
+   "source_sha256": "1b847b2353eaae96b85b44c258d75826eaa4cb4aacef6170c1b296a7588631ae",
+   "ported_sha256": "1cbfacbf5e1488228feae2435a585942467c0cab68bafe5df7ec610e01b15d66",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/RowLatticeMoment.lean": {
+   "source_sha256": "63da057e5cdba6c03e18e6cad9e2a6d163e4697c2d107e144d597ec51f4434da",
+   "ported_sha256": "33ea421bf14c8094028dfaa24997573d0db51743bbb607d3c2e4ec32182750d9",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/RowLatticePlane.lean": {
+   "source_sha256": "4fc98d36c101fea99e4f18e573f18a15e9239d91cc19d3c2d5ff7d32679315d1",
+   "ported_sha256": "b7988d605403fa22ec2e3edd5e26cfc5efde73e1c7c1082026e4435f349d8c7a",
+   "imports_rewritten": 5
+  },
+  "OAI/Geometry/HeilbronnTriangle/RowLatticeVolume.lean": {
+   "source_sha256": "4c479fbcb51a99e5a00e32f0a69be1226aec74ea52837575c8a61c46f33c9405",
+   "ported_sha256": "920fbbdf2f08e7f9a8acdf7c10d709add7e207ea6da5eaf633deefc27979ff3b",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/RowPairingDivisor.lean": {
+   "source_sha256": "dc3c2da8157456613ad1f27ba60ad2a6bc2357f257d1f25e203a85a2a7069ebd",
+   "ported_sha256": "92c379d44186d4d02e1b7e114f37a1e31fda1f7b7ac46c98bef5941ac8fd86e5",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/RowPlaneReduction.lean": {
+   "source_sha256": "2da655af5176ed0aeb83e4f039a03a128c31ecbf54484ea23039c5e17d4403f5",
+   "ported_sha256": "8fae78ad503553333238e0f0edba2816bf734720a4ad7705d3819ed82a176704",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/SampleDeletion.lean": {
+   "source_sha256": "5d1107dbb3a0d6afff84aef774278b1a9ed9edff8bea4a71d99b8a5c9b2d5b83",
+   "ported_sha256": "a7be598323b1d7c13df68145223781ac1afe47a842ead81b5c81f0b3e15fe9eb",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/SampleUpper.lean": {
+   "source_sha256": "cfb9fd4278447024cab50d8f0bacd65881a679af4493c70ed80019cdc18fb4a9",
+   "ported_sha256": "cfb9fd4278447024cab50d8f0bacd65881a679af4493c70ed80019cdc18fb4a9",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/SamplingBound.lean": {
+   "source_sha256": "d4e51a113d3a960dd18231dbf9394e870daaeb893d617f760192bd4aa369d838",
+   "ported_sha256": "cf41b02f04dbd1d3b3609e8b0971d65bbc1d5d42ff8f59ba1f7b82dfc6994838",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/SamplingErrors.lean": {
+   "source_sha256": "d9e39143365cdd248766008324986782c03a84b7b74ac45c1c4dd0b13f032a29",
+   "ported_sha256": "d9e39143365cdd248766008324986782c03a84b7b74ac45c1c4dd0b13f032a29",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/SharedGeometricAlteration.lean": {
+   "source_sha256": "57a8798d60d12c700f51680f379afb50e91a54e0daa1ef5e4ce29cf32298dfeb",
+   "ported_sha256": "cbdc8e350f3d230e2604bcbd71910c441f5aa1aa52f0828097495a525e017853",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/ShortKernelVectors.lean": {
+   "source_sha256": "a69a8a163fcaeb500b20b32e262a27e5420cff01408a22e2f1b0786bd27a95f4",
+   "ported_sha256": "3e2ca34e083886869b7c8111afc0956fad02ccd6ae2a6b4125409bc7395a3915",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/ShortRelations.lean": {
+   "source_sha256": "b80c1ef82b727bd6f78cc387500a67a4753521bd49389f6883b310d2acc4878d",
+   "ported_sha256": "b80c1ef82b727bd6f78cc387500a67a4753521bd49389f6883b310d2acc4878d",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/ShortestIntegralVector.lean": {
+   "source_sha256": "8ada816ff5c689128e827c849c16d824e364dc6e042524426d81c11c6d7c4bb1",
+   "ported_sha256": "7d41177a03895901815ed129b77265ccdc5839828db57b809325d0df3dabe436",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/SmallDeterminantReduction.lean": {
+   "source_sha256": "74858fcef2f58b0f1f11f5e1583c7dbdf80f636dac855757ea17a187e5f85b97",
+   "ported_sha256": "74858fcef2f58b0f1f11f5e1583c7dbdf80f636dac855757ea17a187e5f85b97",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/SmallDeterminantWeight.lean": {
+   "source_sha256": "52aef6405b21eb773afce3969f40ecb8351cf178760e902cad04e4f6d446bbb0",
+   "ported_sha256": "aaf5c5227bb8d37968233233789c5640edec8cd16a5ecae2761cc3857bd7928d",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/SmithAffineShell.lean": {
+   "source_sha256": "d800f05725bfcfe22a69fa1c7b84a7041b734ba015cd86d7909a448a06426455",
+   "ported_sha256": "34a304cccac9db7a579eff4a685aa37f110d3e0a2e9b27f0562abf1823c02728",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/SmithDigitMoment.lean": {
+   "source_sha256": "38e1027e0ceb7328e35a9d2f05efc25d523b68c880a65d138d64dbb5b6dc8cc0",
+   "ported_sha256": "b2b63bbbf4222b299e55cf15cfe0ef6917cabbba8e3e0c282e927aa2b5f528e6",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/SmithEqualShell.lean": {
+   "source_sha256": "9a2ba1ce5245d1fcf143ff831673f23689ab95e7130ea2847640acfe9e874b9b",
+   "ported_sha256": "4dc2f75fca736407d64cad3f36633e8af4cc7152c10a8fe6bdf3c257955d37cd",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/SmithPlaneData.lean": {
+   "source_sha256": "926691090c720d66ec0b867e561ab5e8342134398de4a4b11895358d8245d0b0",
+   "ported_sha256": "fa4cf7c9c3fcc55a0f0ccdfc1252b9ccec03349e1d0cb6627e5778fe626f4b31",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/SmithSpecialRankTwo.lean": {
+   "source_sha256": "a3afb09e5b7ed437a2dae9b2ae63267ed063560358ea8fe70beff0dc3805d5d4",
+   "ported_sha256": "8a03b48115a7d271738fd5f515bd3e737459f656d742f68de4b82fa6c303dd0a",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/SpecialNormalShell.lean": {
+   "source_sha256": "c7ffe5b69403128efd558b388ffa8b6c9a04de0e342fdb25d71866c0f7dc6b7a",
+   "ported_sha256": "42a968ce852a310b36b8eee645ec87453c5a9dd20cd42b821f426f51d18df61a",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/SpecialNormals.lean": {
+   "source_sha256": "01dc550055f2d5642132ab42a6a3e367e2fbf8ec463f33e20b2b0ca784ce6d44",
+   "ported_sha256": "3a1a4ab50d519a136e5d0a8ca96d1b4c945450311178f46160e803102b2e02e3",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/SpecialRankOneCount.lean": {
+   "source_sha256": "7e0d97db5b59a5de28502e91d29719fab6d5e0a1ad0059de990041ccb22435fb",
+   "ported_sha256": "0a1476d9c2f184985cb3d4dec2a6da523b1706823d6aefd92487e015bf212986",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/SpecialRankTwo.lean": {
+   "source_sha256": "f21e1b108d1647ea12a4a03db94843366366758f83bbd51bf7641cb69d72f13b",
+   "ported_sha256": "e71d7928102948b61830739850c684a2bc01eb43ee90c0c8d640e42aacd737c3",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/StabilizerConjugation.lean": {
+   "source_sha256": "0b6e3084c4cb8f66dc77407b670c16f025cbe06b5171d2f5c278c9f04e78d6a5",
+   "ported_sha256": "748c664ec246a48526b73de6ac732527c45302a1dcc8f69554f8eab8b6c753f0",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/SuccessiveBox.lean": {
+   "source_sha256": "a6fd2f27244bf30ac9513e7df29d07ca939a68fa505672fcbf06d87ee4a14048",
+   "ported_sha256": "a6fd2f27244bf30ac9513e7df29d07ca939a68fa505672fcbf06d87ee4a14048",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/SuccessiveEstimates.lean": {
+   "source_sha256": "2ee07b3b0bdb02c03d14d1a867c162bf77a34a9b05c02d1b0303e564c202e3af",
+   "ported_sha256": "b5407eff84745e553055a10be0c1539639ed2b3093a05ac9783b24836e1ea8aa",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/SuccessiveMinima.lean": {
+   "source_sha256": "c078035a95fcfb1de286b8e87ff29cf06d5ae452373c921400b330d65c012aaa",
+   "ported_sha256": "9c50d26c5022f8fd7f47f42f164e9e5a1568eba7596ec2cacedb1cac8f768328",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/SuccessivePair.lean": {
+   "source_sha256": "65777d130125baf15094d51d8af3125e7a19879b88cf082606a44bc920a5bb0a",
+   "ported_sha256": "5a3740d96963da40e7929dc73b0fe406515129116e84907717089dd398727502",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/SuccessiveTransport.lean": {
+   "source_sha256": "05f2aff62c4f63f736ad7920aff2a4e45eca8e22eeea598c2e0b6ef9400888c5",
+   "ported_sha256": "fb345bb0521b05a17fb619123fb56fed698e9fbf04e92f9c8353809e2101f7d8",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/SuccessiveVectors.lean": {
+   "source_sha256": "d969918049e8686ad96d48c0369726d1153f1a97d81ee271fd4cd236fdea9107",
+   "ported_sha256": "d969918049e8686ad96d48c0369726d1153f1a97d81ee271fd4cd236fdea9107",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/TranslateAverage.lean": {
+   "source_sha256": "55ea89e99f9f18c0927fa9522987ababad38d24a5959b4b0496db3d786a4d0eb",
+   "ported_sha256": "55ea89e99f9f18c0927fa9522987ababad38d24a5959b4b0496db3d786a4d0eb",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/TripleEnumeration.lean": {
+   "source_sha256": "88bae1448ff1fc957c83d0b64e0f9e3fad8c3ce15606a8bf10f0b910d669cb54",
+   "ported_sha256": "671de199b278885e938cf345db0bd8f3829d85cc13a58978fffb53b51cde827a",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/TwoByTwoPivot.lean": {
+   "source_sha256": "4cef332bc725f847a68e8b0934d48051e4d8585cf4c09379e4a10e30fa8f3c5d",
+   "ported_sha256": "4cef332bc725f847a68e8b0934d48051e4d8585cf4c09379e4a10e30fa8f3c5d",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/TwoByTwoSmith.lean": {
+   "source_sha256": "2481fb948fc0f7eaaf2c1b48ecb8d6aec39aa86d93a8e2631e3cbd65021ef01a",
+   "ported_sha256": "9afbc534c73dff9167a3f64611aec0394275b0088a56af6fe207acb25e7166d0",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/TypedFixedFiberCount.lean": {
+   "source_sha256": "72d3cef10f250b913ce6c1b4ec2b127d8f747bc119f759284b85c76e7e7ae2c0",
+   "ported_sha256": "5d186c5862d35cbee29f9d93224d6e615f4c481e716d9d86ccac1b6525d09e83",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/UniformAction.lean": {
+   "source_sha256": "f43e68f40b662cb8140b1081a1dc3e0a3d8e761a3d380d90ab12651af9208d1f",
+   "ported_sha256": "f43e68f40b662cb8140b1081a1dc3e0a3d8e761a3d380d90ab12651af9208d1f",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/UniformFixedFiberCount.lean": {
+   "source_sha256": "224cf89ff229b065d9ab22812973eb5c6f816ed30dc68b015211b0a3a8df4ec7",
+   "ported_sha256": "9550bdab5e90fea054aec1957f7ed44f14ed40987ea3b61856c9c44b244eaf78",
+   "imports_rewritten": 5
+  },
+  "OAI/Geometry/HeilbronnTriangle/UniformLiftPairs.lean": {
+   "source_sha256": "c3435f404a07db1cd418083cc2552a3a870c3b738df7957da23daf97c2b3b795",
+   "ported_sha256": "c63d8bff07e3ced2945f548d129e167ceb03309baae191da8ad11a65398e1fa8",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/UnitRowLatticeMoment.lean": {
+   "source_sha256": "663c1a507f962e3f3e6fce920886b3aff64e3b9bd1d7116837cc9c41d2bbc2f7",
+   "ported_sha256": "ef95c5323ab88480b4581b6b0f519f6a4f1bdaab712b360e6fc1333f2b1ba13b",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/WeightedNormalReduction.lean": {
+   "source_sha256": "fb5842885e1b658b59754ecccb0b4a5408ce8aedc9be46b89d5dd460dcef28b1",
+   "ported_sha256": "b978276f74642db263a0f0153595b4729c72d9d59c6c8dfcb3ff3fcb3af31ac8",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/WeightedZeroAssembly.lean": {
+   "source_sha256": "a8eb7e376bbc37afd6661760440ab832cb740a5dcc5d0239b4694c3bb04e746a",
+   "ported_sha256": "a8eb7e376bbc37afd6661760440ab832cb740a5dcc5d0239b4694c3bb04e746a",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/WeightedZeroPartition.lean": {
+   "source_sha256": "7b53d059ad696a2b3b785ef773582c793397136570f63910a08be9a12212e12b",
+   "ported_sha256": "029a570ce8ed4034c5619a3387957c8467812c52f2fa14399e2c62baa2c6c42e",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZModAnnihilator.lean": {
+   "source_sha256": "52bb4eb9a9446787b869f650f903bf3b9784d391913ae96503dcd02908bf2c28",
+   "ported_sha256": "52bb4eb9a9446787b869f650f903bf3b9784d391913ae96503dcd02908bf2c28",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZeroAffineShell.lean": {
+   "source_sha256": "13f429d57e7a4b0b624d50c5cbc8f327622b0d6be59f9b2e59c6502a07aaccd7",
+   "ported_sha256": "a34032887f5eb254e62b9d3c88dbcdd74f87c875ab74cc74a173cb21fca0c213",
+   "imports_rewritten": 6
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZeroCombinedShell.lean": {
+   "source_sha256": "9e44bd614e0396d5be143313c79e7842fd9162a0cc1a0d04b1d5b7735d131dc7",
+   "ported_sha256": "ab29491c7dd53931f0a9563f70d8606b08e3a602ff68842a2188edbb81caebcf",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZeroCountNormalization.lean": {
+   "source_sha256": "c3343eb9229baa4d19b36f6845cd1e286a0a7888abbd3cdc14d3aaeeb3993f54",
+   "ported_sha256": "ff208c5f94be8830a32e590dce9de7e714cefaf08fbda7f486c5c1ffede50053",
+   "imports_rewritten": 1
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZeroDeterminantCount.lean": {
+   "source_sha256": "f1ff192a63a334f89b9360e25f379316d5280d65427cb3a946ae0104a746d78d",
+   "ported_sha256": "865937bdb43c7d77629ef5f00b8b6405f90ff7601a7df43e58ea6d063aca5ffe",
+   "imports_rewritten": 4
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZeroEqualAdditional.lean": {
+   "source_sha256": "02d3a8aba979fbc04931529916273aa303d2462165942b3d1b5da2612cde0251",
+   "ported_sha256": "c8542c69665b9899570a6466927b2c1747942190fa5befef9160ec9c158b3eee",
+   "imports_rewritten": 3
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZeroEqualMatrices.lean": {
+   "source_sha256": "f98a90d0b5ee3c017639a9c4a37239ac6e68c31ccf48897fe4afe1bf61999a28",
+   "ported_sha256": "8cc07930d0420a721b67f3cea1bd7da0fc3d59ee921df514d9a8832a8fd1945a",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZeroGlobalCount.lean": {
+   "source_sha256": "b9ef8799418725de2fd4cbddf320c5b1346d0560f1ffe0d3719a089e69c07ece",
+   "ported_sha256": "a7241127dae3ac7bb8971bf341ce318cbbc4af5ffa60bb01909018e100485b1f",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZeroMomentSum.lean": {
+   "source_sha256": "9c4155b79f4bd2abcee2fee6a5765549014adde3f242afa476e12b9a8da30e64",
+   "ported_sha256": "9c4155b79f4bd2abcee2fee6a5765549014adde3f242afa476e12b9a8da30e64",
+   "imports_rewritten": 0
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZeroNormalDyadic.lean": {
+   "source_sha256": "97dae152865bee79c8a67b693b3d88a6f99559f5083627c56eaa5c49756ad933",
+   "ported_sha256": "3394326d57b2cab803d4d9f2f2af6619c1b31ee2ee78f4ec8ae6be46f2e0eca4",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZeroRowData.lean": {
+   "source_sha256": "61d0c667bf1cc40cde72a883c2def409d64ec87224563965683917857be4bf45",
+   "ported_sha256": "10586634bde451fc900ef2fe6b5cf1a8f9835b964a1b8fe0c06db2fee5dc24cf",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle/ZeroThreeCasePartition.lean": {
+   "source_sha256": "7921aeadcb2e4aef9918bd1452300dae2d781c24c798e4957ec5fd4c937eb2a0",
+   "ported_sha256": "36ce5e7a91633e54c21112f012e39f139988faa79b19f2333c3f64675a88c195",
+   "imports_rewritten": 2
+  },
+  "OAI/Geometry/HeilbronnTriangle.lean": {
+   "source_sha256": "b5df57f79af00be3654bb576d8160020630bbfd34815e0f4992e82edba30eaa4",
+   "ported_sha256": "8703e2754932d7b9632ca272969f6b3ee64d92d5065d9817c1cb736027d68683",
+   "imports_rewritten": 32
+  }
+ },
+ "counts": {
+  "dir_files": 242,
+  "hub": 1,
+  "files_with_rewritten_imports": 177,
+  "byte_exact_files": 66
+ }
+}
