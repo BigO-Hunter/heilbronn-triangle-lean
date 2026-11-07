@@ -176,7 +176,7 @@ theorem bound_stageB :
     have hsqrt2 : Real.sqrt 2 ≤ 2 := by
       rw [Real.sqrt_le_iff]
       exact ⟨by norm_num, by norm_num⟩
-    have hcast : (n + 1 : ℝ) = (n : ℝ) + 1 := by push_cast; ring
+    have hcast : (n + 1 : ℝ) = (n : ℝ) + 1 := by ring
     have hle : Real.sqrt 2 ≤ (n + 1 : ℝ) := by
       have h4 : (2 : ℝ) ≤ (n : ℝ) := by exact_mod_cast (le_trans (by norm_num) hn3)
       linarith [hcast]
@@ -205,7 +205,7 @@ theorem bound_stageB :
   have hn1' : Real.sqrt 2 * Real.rpow (R0 : ℝ) α < (n + 1 : ℝ) := by
     have h3 : (N1 : ℝ) ≤ (n : ℝ) := by
       exact_mod_cast (le_max_left N1 3).trans hn
-    have h2 : (n + 1 : ℝ) = (n : ℝ) + 1 := by push_cast; ring
+    have h2 : (n + 1 : ℝ) = (n : ℝ) + 1 := by ring
     linarith [hN1]
   have hyR0 : (R0 : ℝ) < y := by
     by_contra h
@@ -268,7 +268,6 @@ theorem bound_stageB :
   have hsq2 : Real.sqrt 2 * ((n + 1 : ℝ) / Real.sqrt 2) - 1 = (n : ℝ) := by
     rw [mul_comm, div_mul_cancel₀ _
       (ne_of_gt (Real.sqrt_pos.mpr (show (0 : ℝ) < 2 by norm_num)))]
-    push_cast
     ring
   have hysq : (y : ℝ) ^ αN = (n + 1 : ℝ) / Real.sqrt 2 := hyαN
   have hysq2 : Real.sqrt 2 * (y : ℝ) ^ αN =
@@ -300,7 +299,7 @@ theorem bound_stageB :
     have h4 : (2 * y) ^ αN = (2 : ℝ) ^ αN * (y : ℝ) ^ αN := mul_pow _ _ _
     have h5 : (y : ℝ) ^ αN = (n + 1 : ℝ) / Real.sqrt 2 := hyαN
     have h6 : (n + 1 : ℝ) ≤ 2 * (n : ℝ) := by
-      have h7 : (n + 1 : ℝ) = (n : ℝ) + 1 := by push_cast; ring
+      have h7 : (n + 1 : ℝ) = (n : ℝ) + 1 := by ring
       linarith [hn1]
     have h2pos : (0 : ℝ) < Real.sqrt 2 := Real.sqrt_pos.mpr (by norm_num)
     have h8 : (2 : ℝ) ^ αN * (m : ℝ) ^ αN ≤ (2 : ℝ) ^ αN * (2 * y) ^ αN :=

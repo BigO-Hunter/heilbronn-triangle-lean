@@ -1,8 +1,4 @@
-import Submission.OAI.Geometry.HeilbronnTriangle.Definitions
--- Provenance: copied from bigospeedrun/verifier@d025a321488b4c9dda3b545782a612612bbc7100
---   file: challenges/heilbronn-triangle/Statement.lean (blob e2513ec608abcc958d9bb2b9f44e0da98c62ebe5, sha256 512410d50823a099599f662fe5e15462ed6d89df36e7363799ec4a3e14aebfcb), fetched 2026-11-01.
---   ONLY the import path(s) below were adjusted to the Submission/ layout
---   (challenge README's copy-into-Submission option); body unchanged.
+import OAI.Geometry.HeilbronnTriangle.Definitions
 
 /-!
 Released under Apache 2.0 as described in LICENSE.

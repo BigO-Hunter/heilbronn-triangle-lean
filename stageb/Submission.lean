@@ -1,22 +1,44 @@
+import Submission.HeilbronnStatement
 import Submission.OAI.Geometry.HeilbronnTriangle
-import Submission.Statement
-import Submission.VacuityCheck
 import Submission.Bridge.Assembly
 
 /-!
-Provisional root hub for the Stage B port (R2125607854 pre-build, 2026-11-02).
-Imports the full ported comparator tree so `lake build Submission` elaborates
-every file. The §8 bridge has now landed (Submission/Bridge/); it is imported
-here so the default lib build covers the Bridge modules too (this lakefile's
-lean_lib builds roots + import closure, NOT a directory glob — the booked
-"glob-cache skip" gotcha is exactly this). The filed entry
-`theorem Race.bound : BigOSpeedrun.HeilbronnTriangle.Bound (1/10^237 : ℚ)`
-currently lives in the workspace-root `EntryDryRun.lean` (dry-run per mission
-spec); packaging into the filed Submission.lean shape happens at gate open,
-per the shape the live target generator binds.
+Big O Speedrun — Heilbronn triangle, Lean submission entry point.
 
-Ported tree: openai/math@1581d4cbdd69a0faf34b2089614fe2a814316a6a,
-lean/OAI/Geometry/HeilbronnTriangle/ (242 files) + the HeilbronnTriangle.lean
-hub module; Apache-2.0 (LICENSE); import roots rewritten to Submission.*, all
-other lines byte-identical (see PORT_MANIFEST.json).
+Board: https://bigospeedrun.com/other/heilbronn-triangle
+Target per docs/targets.md: `theorem Race.bound : ... Bound ((p : ℚ) / q)`.
+
+Filed saving: eta = 1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 = 1/(100000 * 10^232) ~ 1e-237,
+a positive saving inside the accepted range `0 < p/q <= 5/6`. It is proven,
+not the exact paper exponent 1/(100000*K): `heilbronnK <= 10^232` is proved
+symbolically in `Submission/Bridge/KBound.lean` (K stays opaque), and
+`Submission/Bridge/Assembly.lean` proves the bound at the exponent
+`1/(100000 * 10^232)` directly, so no monotonicity step is needed.
+
+Provenance of the proof tree:
+* `Submission/HeilbronnStatement.lean` is `challenges/heilbronn-triangle/
+  VerifierStatement.lean` (bigospeedrun/verifier) copied byte for byte,
+  git blob bff8ba7bc805b881893123eb9b26e348b2bb6ee8. It carries OpenAI's
+  frozen `OAI.Problem355` definitions (openai/math@1581d4cb, Apache-2.0) and
+  the parameterized `BigOSpeedrun.HeilbronnTriangle.Bound`.
+* `Submission/OAI/Geometry/HeilbronnTriangle/**` is OpenAI's comparator proof
+  tree (openai/math@1581d4cb, Apache-2.0), 243 modules, imports rewritten.
+  Its `Definitions.lean` path is kept as a one-line re-export of the trusted
+  statement so every ported module keeps its original import line.
+* `Submission/Bridge/**` is new work: the section-8 interpolation that turns
+  OpenAI's subsequence statement into this board's "every large n" statement.
+
+Axiom audit for `Race.bound`: exactly `[propext, Classical.choice, Quot.sound]`.
+No `sorry`, no custom axioms, no `native_decide`.
 -/
+
+theorem Race.bound :
+    BigOSpeedrun.HeilbronnTriangle.Bound ((1 : ℚ) / 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) := by
+  have hcast : ((((1 : ℚ) / 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) : ℚ) : ℝ) = (1 : ℝ) / (100000 * (10 ^ 232 : ℝ)) := by
+    norm_num
+  obtain ⟨c, hc, N, hN⟩ := OAI.Problem355.Bridge.bound_stageB
+  refine ⟨c, hc, N, fun n hn => ?_⟩
+  obtain ⟨P, hcard, hsq, harea⟩ := hN n hn
+  refine ⟨P, hcard, hsq, ?_⟩
+  rw [hcast]
+  exact harea

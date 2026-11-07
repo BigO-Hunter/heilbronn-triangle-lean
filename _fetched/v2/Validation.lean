@@ -1,26 +1,21 @@
-import Submission.Statement
--- Provenance: copied from bigospeedrun/verifier@d025a321488b4c9dda3b545782a612612bbc7100
---   file: auto-research/lean-statements/2026-10-19-joshuacortez-heilbronn-triangle/VacuityCheck.lean (blob 1c98724e2000e2e3a6593a208108e2055f9dbe5b, sha256 517f5e8fc44b4603884c83fdde97b2dad566dbcd4558676aa36c7cdaf6d42864), fetched 2026-11-01.
---   ONLY the import path(s) below were adjusted to the Submission/ layout
---   (challenge README's copy-into-Submission option); body unchanged.
---   Authorship (upstream NOTICE.md): Claude Opus 5.5 (Anthropic) as agent
---   for @joshuacortez, who reviewed and submitted it. Apache-2.0; header below
---   preserved verbatim.
+import VerifierStatement
 
 /-!
-Released under Apache 2.0.
-Prepared with assistance from Claude (Anthropic).
+# Validation of `VerifierStatement.lean` (not part of the trusted target)
 
-Vacuity checks for `BigOSpeedrun.HeilbronnTriangle.Bound`.
+Released under Apache 2.0. Ported unchanged from the statement evidence of verifier PR #20
+(`auto-research/lean-statements/2026-10-19-joshuacortez-heilbronn-triangle/VacuityCheck.lean`,
+prepared with assistance from Claude), with only this header and the import changed: it now
+imports the self-contained `VerifierStatement.lean`.
+
+No positive saving has a proof here. These checks show that the target has the intended shape:
 
 * `bound_mono`: a larger saving implies every smaller one.
-* `bound_zero`: the classical saving `η = 0` holds (Erdős's parabola modulo a
-  prime, with Bertrand's postulate for every `n`).
-* `not_bound_of_two_lt`: every saving `η > 2` fails, because no triangle in the
-  unit square has area above `1`.
-
-So the target is neither trivially true nor trivially false. These lemmas are
-review evidence only; they are not part of the trusted statement.
+* `bound_zero`: the classical saving `η = 0` holds (Erdős's parabola modulo a prime, with
+  Bertrand's postulate for every `n`). The verifier refuses `η = 0` as a bound: it is vacuous.
+* `not_bound_of_two_lt`: every saving `η > 2` fails, because no triangle in the unit square has
+  area above `1`.
+* `nonvacuous`: the target is neither trivially true nor trivially false.
 -/
 
 namespace BigOSpeedrun.HeilbronnTriangle
@@ -195,3 +190,8 @@ theorem nonvacuous : Bound 0 ∧ ¬ Bound 3 :=
   ⟨bound_zero, not_bound_of_two_lt (by norm_num)⟩
 
 end BigOSpeedrun.HeilbronnTriangle
+
+#print axioms BigOSpeedrun.HeilbronnTriangle.bound_mono
+#print axioms BigOSpeedrun.HeilbronnTriangle.bound_zero
+#print axioms BigOSpeedrun.HeilbronnTriangle.not_bound_of_two_lt
+#print axioms BigOSpeedrun.HeilbronnTriangle.nonvacuous
