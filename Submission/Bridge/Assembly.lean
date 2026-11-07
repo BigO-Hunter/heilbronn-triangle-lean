@@ -24,10 +24,10 @@ triangle area — the min is over fewer triples).
 The two-sided cardinality bound makes `s ∈ [n, C'·n]` with
 `C' = √(cubeTauConst K)·4^α·2/√2` CONSTANT in `n`, so
 `area ≥ s^(-2+η_exp) ≥ (C'n)^(-2+η_exp) = C'^(-2+η_exp)·n^(-2+η_exp)
-= c·n^(-2+η_exp)` with `c = C'^(-2+η_exp) > 0` (exact-K restatement: the
-filed exponent equals `heilbronnExponent`, see `Bridge/KBound.lean`).
-`η₀ = 1/(100000·10^232) ≤ heilbronnExponent` — replaced by the exact-K
-equality `eta_eq_heilbronnExponent` (`Bridge/KBound.lean`, rung-1).
+= c·n^(-2+η_exp)` with `c = C'^(-2+η_exp) > 0`, and
+`η_exp = heilbronnExponent = 1/(100000·K)` with `K` now a literal
+(`Bridge/KBound.lean::eta_eq_heilbronnExponent`), so the filed exponent and
+the proved exponent are the same number — no monotonicity step remains.
 The board's `∃ c > 0` never needs `c` explicit.
 -/
 

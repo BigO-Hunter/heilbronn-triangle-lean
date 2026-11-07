@@ -46,21 +46,24 @@ this repository is new.
 | File | Content |
 |---|---|
 | `Submission/Bridge/Cardinality.lean` | Two-sided `sampleCard` bounds: `√2·r^(k·45435+16) − 1 < sampleCard ≤ √(3·2³⁰·(200k²)^(k·3029+1))·r^(k·45435+16)`. The `α = 45435k+16` exponent matches the board baseline `2/(45435K+16)`. |
-| `Submission/Bridge/KBound.lean` | `heilbronnK ≤ 10^232` with `K` kept opaque (`K = T²+1`, `T = choose M 3`, `M = choose 163 41`), plus `1/(100000·10^232) ≤ heilbronnExponent`. |
-| `Submission/Bridge/Assembly.lean` | Section-8 interpolation: Bertrand prime choice, `m = ⌈((n+1)/√2)^(1/α)⌉`, `s ∈ [n, C′·n]`, deletion to exactly `n` points, and `bound_stageB : ∃ c > 0, ∃ N, ∀ n ≥ N, ∃ P, …` at exponent `1/(100000·10^232)`. |
-| `Submission.lean` | Entry point: `theorem Race.bound : BigOSpeedrun.HeilbronnTriangle.Bound ((1 : ℚ) / 10^237)`. |
+| `Submission/Bridge/KBound.lean` | `heilbronnM`, `heilbronnT`, `heilbronnK = T²+1` each as exact literals (39/116/232 digits) through the factorial route, `K` never unfolded (`heilbronnK_eq` + cast injectivity), and `eta_eq_heilbronnExponent : (1:ℝ)/(100000·K_literal) = heilbronnExponent`. |
+| `Submission/Bridge/Assembly.lean` | Section-8 interpolation: Bertrand prime choice, `m = ⌈((n+1)/√2)^(1/α)⌉`, `s ∈ [n, C′·n]`, deletion to exactly `n` points, and `bound_stageB : ∃ c > 0, ∃ N, ∀ n ≥ N, ∃ P, …` at the symbolic exponent `heilbronnExponent = 1/(100000·K)`. |
+| `Submission.lean` | Entry point: `theorem Race.bound : BigOSpeedrun.HeilbronnTriangle.Bound ((1 : ℚ) / (100000·K))`, denominator written as its 237-digit literal. |
 
 `BRIDGE_EDITS.md` records every file the bridge touched, including the zero
 edits to the ported tree.
 
 ## What is proven and what is not
 
-Proven: `Δ(n) ≥ c·n^(-2+η)` for every `n ≥ N`, with `η = 10^-237`.
+Proven: `Δ(n) ≥ c·n^(-2+η)` for every `n ≥ N`, with
+`η = 1/(100000·K) ≈ 7.2144·10^-237` — the upstream tree's symbolic exponent
+exactly, `K = C(C(163,41),3)² + 1` computed as a 232-digit literal.
 
-Not proven here: the exact paper exponent `η₀ = 1/(100000·K) ≈ 7.2·10^-237`.
-The filed value is smaller, which implies the same shape at a slightly weaker
-saving; no monotonicity lemma is needed because the interpolation is carried
-out directly at `1/(100000·10^232)`.
+Not proven here: the sharp paper exponent `η = 2/(45435·K+16) ≈ 3.176·10^-236`,
+which is 4.4× larger. Reaching it means closing three slack steps inside the
+ported chain (see `~/bigo-campaign/heilbronn-bar/RUNG1_REPORT.md`, section 5);
+nothing about it is new mathematics, but the chain is stated at the frozen
+`heilbronnExponent` def throughout, so it is a statement-layer refactor.
 
 Nothing here improves the state of the art. The value of the row is that it is
 the first machine-verified *positive* saving on this board: it checks that the
