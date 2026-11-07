@@ -2,35 +2,44 @@ import Mathlib
 import Submission.OAI.Geometry.HeilbronnTriangle.Parameters
 
 /-!
-# §8 bridge, step 2: the literal rational saving, with `heilbronnK` OPAQUE
+# §8 bridge, step 2: the literal rational saving, with `heilbronnK` EXACT
 
-The filed saving is `η₀ = 1/(100000·L)` with the explicit literal
-`L = 10^232 ≥ heilbronnK`. `heilbronnK = heilbronnT² + 1` is `@[irreducible]`
-upstream, so we never evaluate it — we bound it symbolically:
+The filed saving is `η₀ = 1/(100000·K)` with `K = heilbronnK` computed exactly
+(232-digit literal). `heilbronnK = heilbronnT² + 1` is `@[irreducible]`
+upstream, so we never evaluate it by whnf — we compute it through the
+sanctioned `heilbronnK_eq` route:
 
 * `heilbronnM = Nat.choose 163 41` reduces to its 39-digit literal through
   `Nat.choose_eq_factorial_div_factorial` + `norm_num` (Pascal recursion on a
   39-digit argument is kernel-intractable; the factorial route is not);
 * `6·heilbronnT = M·(M−1)·(M−2)` via
-  `Nat.choose_mul_factorial_mul_factorial` + `Nat.factorial_succ`, hence
-  `(T:ℝ) ≤ (M:ℝ)³/6` and `(T:ℝ)² ≤ (M:ℝ)⁶/36`;
-* `heilbronnK_eq` (in-tree, `Parameters.lean`) unfolds the irreducible `K`,
-  giving `K ≤ M⁶/36 + 1 ≤ 10^232` (the last step pure `norm_num` on the
-  literal: `M₀⁶ ≈ 5·10²³² < 36·10²³²`);
-* reciprocals flip: `(1:ℝ)/(100000·10^232) ≤ heilbronnExponent`.
+  `Nat.choose_mul_factorial_mul_factorial` + `Nat.factorial_succ`
+  (`heilbronnT_mul_six`, unchanged), hence `heilbronnT` as its 116-digit
+  literal (`heilbronnT_val`: rewrite the M literal into the identity, cancel
+  the 6, `norm_num` on 39-digit arithmetic);
+* `heilbronnK_eq` (in-tree, `Parameters.lean`) unfolds the irreducible `K`
+  symbolically to `heilbronnT² + 1`; the ℕ equality `heilbronnT = T_literal`
+  comes back by cast injectivity (no K whnf anywhere), so `heilbronnK_val`
+  closes on one 232-digit `norm_num` (`T² + 1` vs the K literal);
+* `eta_eq_heilbronnExponent` unfolds the plain `heilbronnExponent` def and
+  rewrites the cast K — an equality, replacing the old `≤ 10^232` floor.
 
-The board rational itself is `η₀ = (1:ℚ)/10^237` (238-digit denominator
-literal `100000·10^232`); the cast identity to the ℝ form used in the
-assembly is `norm_num` (smoke S5 precedent: 237-digit rational forms cost
-≤0.8s warm).
+Kernel hygiene (Assembly scratch B9–B13, kept): NO `Nat.pow_pos` /
+`nlinarith` / `exact_mod_cast` certificates over K-headed ℕ expressions
+(their elaborated pow form mismatches `Nat.pow` and the kernel's whnf
+fallback unfolds the `@[irreducible]` K into the `Nat.choose` Pascal
+recursion — deterministic timeout, measured). K is touched only through
+`heilbronnK_eq` + the M-literal route, on the ℝ side.
 -/
 
 namespace OAI
 
 noncomputable section
 
--- norm_num/exact_mod_cast on 232-digit literals needs deeper recursion.
-set_option maxRecDepth 4000
+-- norm_num on 232-digit literals needs deeper recursion (232-digit
+-- decimal literals are new here; the ≤ 10^232 route only ever handled
+-- 39-digit inputs and a sparse `10^232`).
+set_option maxRecDepth 20000
 
 namespace Problem355.Bridge
 
@@ -76,59 +85,41 @@ theorem heilbronnT_mul_six :
   push_cast at hR
   exact mul_right_cancel₀ hnz hR
 
-/-- `T ≤ M³/6` — the sharpening that makes `L = 10^232` reachable. -/
-theorem heilbronnT_le : (heilbronnT : ℝ) ≤ (heilbronnM : ℝ) ^ 3 / 6 := by
-  have hM0 : (0 : ℝ) ≤ heilbronnM := by positivity
-  have hM1 : ((heilbronnM - 1 : ℕ) : ℝ) ≤ heilbronnM := by
-    exact_mod_cast Nat.sub_le _ _
-  have hM2 : ((heilbronnM - 2 : ℕ) : ℝ) ≤ heilbronnM := by
-    exact_mod_cast Nat.sub_le _ _
-  have hprod : (heilbronnM : ℝ) * ((heilbronnM - 1 : ℕ) : ℝ) *
-      ((heilbronnM - 2 : ℕ) : ℝ) ≤ (heilbronnM : ℝ) ^ 3 := by
-    calc (heilbronnM : ℝ) * ((heilbronnM - 1 : ℕ) : ℝ) * ((heilbronnM - 2 : ℕ) : ℝ)
-        ≤ (heilbronnM : ℝ) * (heilbronnM : ℝ) * (heilbronnM : ℝ) := by
-          gcongr
-        _ = (heilbronnM : ℝ) ^ 3 := by ring
-  have h6 : (6 : ℝ) * (heilbronnT : ℝ) ≤ (heilbronnM : ℝ) ^ 3 := by
-    have := heilbronnT_mul_six
-    linarith
-  have h6pos : (0 : ℝ) < 6 := by norm_num
-  rw [le_div_iff₀ h6pos]
-  linarith
+/-- `heilbronnT` as its exact 116-digit literal: substitute the M literal into
+`heilbronnT_mul_six` (all M occurrences become ℕ literals), cancel the 6,
+`norm_num` on 39-digit arithmetic. -/
+theorem heilbronnT_val :
+    (heilbronnT : ℝ) =
+      37230514451212307341579258391864337055334059182582962517976151329575965621134724577475162784520018371181237814762800 := by
+  have hM : heilbronnM = 606759748397114245242771031375422128400 := heilbronnM_val
+  have h6 := heilbronnT_mul_six
+  rw [hM] at h6
+  have hnz : (6 : ℝ) ≠ 0 := by norm_num
+  refine mul_right_cancel₀ hnz ?_
+  rw [h6]
+  norm_num
 
-/-- `T² ≤ M⁶/36` — the squared form the literal `norm_num` check consumes. -/
-theorem heilbronnT_sq_le : (heilbronnT : ℝ) ^ 2 ≤ (heilbronnM : ℝ) ^ 6 / 36 := by
-  have hT0 : (0 : ℝ) ≤ heilbronnT := by positivity
-  have h1 : (heilbronnT : ℝ) ^ 2 ≤ ((heilbronnM : ℝ) ^ 3 / 6) ^ 2 :=
-    pow_le_pow_left₀ hT0 heilbronnT_le 2
-  have h2 : ((heilbronnM : ℝ) ^ 3 / 6) ^ 2 = (heilbronnM : ℝ) ^ 6 / 36 := by ring
-  linarith
-
-/-- THE literal bound: `heilbronnK ≤ 10^232`, with `K` never evaluated. -/
-theorem heilbronnK_le : heilbronnK ≤ 10 ^ 232 := by
+/-- `heilbronnK` as its exact 232-digit literal. The irreducible `K` is
+unfolded only through `heilbronnK_eq` (the sanctioned route); the ℕ equality
+`heilbronnT = T_literal` returns by cast injectivity, never by whnf. -/
+theorem heilbronnK_val :
+    (heilbronnK : ℝ) =
+      1386111206301928454498485019847624895039491801209725212873042591990897182969865758396728036445865160210900630928202396854055072270540931245975414924580519625964748753131329280551538059491908934294724322696349160297595005620263840001 := by
   rw [heilbronnK_eq]
-  exact_mod_cast (show ((heilbronnT ^ 2 + 1 : ℕ) : ℝ) ≤ (10 ^ 232 : ℝ) from by
-    push_cast
-    have hM : (heilbronnM : ℝ) = 606759748397114245242771031375422128400 := by
-      exact_mod_cast heilbronnM_val
-    have hnum : (606759748397114245242771031375422128400 : ℝ) ^ 6 / 36 + 1 ≤
-        (10 ^ 232 : ℝ) := by norm_num
-    have hc : (heilbronnM : ℝ) ^ 6 / 36 + 1 ≤ (10 ^ 232 : ℝ) := by
-      rw [hM]
-      exact hnum
-    have hsq := heilbronnT_sq_le
-    linarith)
+  have hTnat : heilbronnT =
+      37230514451212307341579258391864337055334059182582962517976151329575965621134724577475162784520018371181237814762800 := by
+    exact_mod_cast heilbronnT_val
+  rw [hTnat]
+  norm_num
 
-/-- The filed exponent is below the tree's symbolic exponent. -/
-theorem eta_le_heilbronnExponent :
-    (1 : ℝ) / (100000 * (10 ^ 232 : ℝ)) ≤ heilbronnExponent := by
-  have hK : (0 : ℝ) < 100000 * (heilbronnK : ℝ) := by
-    have := heilbronnK_pos
-    positivity
-  have hden : 100000 * (heilbronnK : ℝ) ≤ 100000 * (10 ^ 232 : ℝ) := by
-    gcongr
-    exact_mod_cast heilbronnK_le
-  exact one_div_le_one_div_of_le hK hden
+/-- The filed exponent IS the tree's symbolic exponent, exactly. -/
+theorem eta_eq_heilbronnExponent :
+    (1 : ℝ) /
+      (100000 *
+        1386111206301928454498485019847624895039491801209725212873042591990897182969865758396728036445865160210900630928202396854055072270540931245975414924580519625964748753131329280551538059491908934294724322696349160297595005620263840001) =
+      heilbronnExponent := by
+  unfold heilbronnExponent
+  rw [heilbronnK_val]
 
 end Problem355.Bridge
 

@@ -24,8 +24,10 @@ triangle area — the min is over fewer triples).
 The two-sided cardinality bound makes `s ∈ [n, C'·n]` with
 `C' = √(cubeTauConst K)·4^α·2/√2` CONSTANT in `n`, so
 `area ≥ s^(-2+η_exp) ≥ (C'n)^(-2+η_exp) = C'^(-2+η_exp)·n^(-2+η_exp)
-≥ c·n^(-2+η₀)` with `c = C'^(-2+η_exp) > 0` and
-`η₀ = 1/(100000·10^232) ≤ heilbronnExponent` (`Bridge/KBound.lean`).
+= c·n^(-2+η_exp)` with `c = C'^(-2+η_exp) > 0` (exact-K restatement: the
+filed exponent equals `heilbronnExponent`, see `Bridge/KBound.lean`).
+`η₀ = 1/(100000·10^232) ≤ heilbronnExponent` — replaced by the exact-K
+equality `eta_eq_heilbronnExponent` (`Bridge/KBound.lean`, rung-1).
 The board's `∃ c > 0` never needs `c` explicit.
 -/
 
@@ -110,15 +112,15 @@ theorem config_at_prime (r : ℕ) (hr : r.Prime) (D : PrimeParameterData heilbro
     exact sample_size_scaled_area hrR hN htau hhalf
       (harea p hp q hq u hu hpq hpu hqu)
 
-/-- THE §8 INTERPOLATION, real-exponent form: for `η₀ℝ = 1/(100000·10^232)`,
+/-- THE §8 INTERPOLATION, real-exponent form at the exact symbolic exponent
+`heilbronnExponent = 1/(100000·K)` (K computed exactly in `Bridge/KBound.lean`):
 every sufficiently large `n` carries an `n`-point configuration with
-`min area ≥ c·n^(-2+η₀ℝ)`, `c > 0`. -/
+`min area ≥ c·n^(-2+η_exp)`, `c > 0`. -/
 theorem bound_stageB :
     ∃ c : ℝ, 0 < c ∧ ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
       ∃ P : Finset Point, P.card = n ∧ pointsInUnitSquare P ∧
         triangleAreasAtLeast P
-          (c * Real.rpow (n : ℝ)
-            (-2 + (1 : ℝ) / (100000 * (10 ^ 232 : ℝ)))) := by
+          (c * Real.rpow (n : ℝ) (-2 + heilbronnExponent)) := by
   classical
   let αN : ℕ := heilbronnK * 45435 + 16
   let α : ℝ := (αN : ℝ)
@@ -345,20 +347,10 @@ theorem bound_stageB :
       Real.rpow C' (-2 + heilbronnExponent) *
         Real.rpow (n : ℝ) (-2 + heilbronnExponent) :=
     Real.mul_rpow (le_of_lt hCpos) (by positivity)
-  have hstep3 : Real.rpow (n : ℝ) (-2 + (1 : ℝ) / (100000 * (10 ^ 232 : ℝ))) ≤
-      Real.rpow (n : ℝ) (-2 + heilbronnExponent) :=
-    Real.rpow_le_rpow_of_exponent_le hn1 (by
-      have := eta_le_heilbronnExponent
-      linarith)
-  have hcpos : (0 : ℝ) < Real.rpow C' (-2 + heilbronnExponent) :=
-    Real.rpow_pos_of_pos hCpos _
   intro p hp q hq u hu hpq hpu hqu
   calc Real.rpow C' (-2 + heilbronnExponent) *
-        Real.rpow (n : ℝ) (-2 + (1 : ℝ) / (100000 * (10 ^ 232 : ℝ)))
-      ≤ Real.rpow C' (-2 + heilbronnExponent) *
-          Real.rpow (n : ℝ) (-2 + heilbronnExponent) :=
-        mul_le_mul_of_nonneg_left hstep3 (le_of_lt hcpos)
-    _ = Real.rpow (C' * (n : ℝ)) (-2 + heilbronnExponent) := hstep2.symm
+        Real.rpow (n : ℝ) (-2 + heilbronnExponent)
+      = Real.rpow (C' * (n : ℝ)) (-2 + heilbronnExponent) := hstep2
     _ ≤ Real.rpow (s : ℝ) (-2 + heilbronnExponent) := hstep1
     _ ≤ triangleArea p q u := hsub p hp q hq u hu hpq hpu hqu
 
