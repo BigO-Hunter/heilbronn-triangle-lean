@@ -62,7 +62,7 @@ record; the claimed frontier on this board is orders of magnitude better.
 
 ## License
 
-Apache-2.0. See `LICENSE` and `NOTICE`.
+Licensed under the CFSF License — see `LICENSE` ([github.com/darkhipo/cfsf](https://github.com/darkhipo/cfsf)). The vendored maintainer statement keeps its upstream license — see `NOTICE`.
 
 ---
 
