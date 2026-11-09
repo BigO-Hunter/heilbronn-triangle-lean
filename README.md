@@ -63,3 +63,16 @@ record; the claimed frontier on this board is orders of magnitude better.
 ## License
 
 Apache-2.0. See `LICENSE` and `NOTICE`.
+
+---
+
+## Why this repo is up
+
+Reproducible verified bounds: this package backs the org's Heilbronn triangle filing (bound 1/10²³⁷, verifier#126 verified) so anyone can rebuild and recheck it against the board's issue route.
+
+[BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for contributions toward [Big O Speedrun](https://bigospeedrun.com) — a companion, never the project. Org story: [profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
+
+## What work can be done here
+
+The filed bound is verified (verifier#126). Open work: independent rebuilds of the pinned package; the next positive-power improvement (see the heilbronn-bar lane for the live bar).
+
