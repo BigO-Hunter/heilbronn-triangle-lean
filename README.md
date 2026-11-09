@@ -35,3 +35,16 @@ lake build Submission
 ## License and provenance
 
 Apache-2.0. Definitions and the comparator proof tree: Copyright OpenAI (see `NOTICE`, `LICENSE`). Vacuity checks: prepared with assistance from Claude (Anthropic) for @joshuacortez. Bridge, port rewiring and this entry: prepared by darkhipo's agent. The Heilbronn statement files come from [bigospeedrun/verifier](https://github.com/bigospeedrun/verifier), which credits the sources above.
+
+---
+
+## Why this repo is up
+
+Reproducible verified bounds: the first machine-checked positive-power improvement on the Heilbronn board (Race.bound at 1/10²³⁷, verifier#105 route) — public evidence for independent reruns.
+
+[BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for contributions toward [Big O Speedrun](https://bigospeedrun.com) — a companion, never the project. Org story: [profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
+
+## What work can be done here
+
+The verified row stands. Open work: independent reruns; pushing η below 1/10²³⁷ toward the paper-exact η₀ (requires weakening the `heilbronnK` opacity).
+
