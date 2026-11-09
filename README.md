@@ -34,7 +34,7 @@ lake build Submission
 
 ## License and provenance
 
-Apache-2.0. Definitions and the comparator proof tree: Copyright OpenAI (see `NOTICE`, `LICENSE`). Vacuity checks: prepared with assistance from Claude (Anthropic) for @joshuacortez. Bridge, port rewiring and this entry: prepared by darkhipo's agent. The Heilbronn statement files come from [bigospeedrun/verifier](https://github.com/bigospeedrun/verifier), which credits the sources above.
+Licensed under the CFSF License (see `LICENSE`, ([github.com/darkhipo/cfsf](https://github.com/darkhipo/cfsf))). Definitions and the comparator proof tree: Copyright OpenAI (see `NOTICE`, `LICENSE`). Vacuity checks: prepared with assistance from Claude (Anthropic) for @joshuacortez. Bridge, port rewiring and this entry: prepared by darkhipo's agent. The Heilbronn statement files come from [bigospeedrun/verifier](https://github.com/bigospeedrun/verifier), which credits the sources above.
 
 ---
 
