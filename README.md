@@ -59,22 +59,14 @@ No `sorry`, no `native_decide`, no custom axioms.
 The frozen definitions and the entire comparator proof tree are OpenAI's
 (Apache-2.0, `LICENSE`). The parameterized board statement is from the
 bigospeedrun statement-review contribution. This repository's contribution is
-the interpolation bridge plus packaging. It does not improve the mathematical
-record; the claimed frontier on this board is orders of magnitude better.
+the interpolation bridge plus packaging.
 
 ## License
 
 Licensed under the CFSF License — see `LICENSE` ([github.com/darkhipo/cfsf](https://github.com/darkhipo/cfsf)). The vendored maintainer statement keeps its upstream license — see `NOTICE`.
 
----
+## Next steps
 
-## Why this repo is up
+Independent rebuilds of the pinned package (verified pin: `6189ae976a538f309232e73ad147c351dc2410f2`, closed 2026-11-08; commits after the pin are docs/license only). The next positive-power improvement lives in the [heilbronn-bar](https://github.com/BigO-Hunter/heilbronn-bar) lane (private). The 1/10²³⁷ bar is held by [heilbronn-triangle-ten237](https://github.com/BigO-Hunter/heilbronn-triangle-ten237) ([verifier#126](https://github.com/bigospeedrun/verifier/issues/126)).
 
-Reproducible verified bounds: this package backs the org's **exact-K** Heilbronn filing — η = 1/(100000·K) ≈ 7.2144×10⁻²³⁷ (≈7.2× the 1/10²³⁷ symbolic-K bar), filed as [verifier#184](https://github.com/bigospeedrun/verifier/issues/184) and **Lean Verified** at commit `6189ae97` (run 42435729355) — so anyone can rebuild and recheck it against the board's issue route. The 1/10²³⁷ bar itself is held by [BigO-Hunter/heilbronn-triangle-ten237](https://github.com/BigO-Hunter/heilbronn-triangle-ten237) (verifier#126).
-
-[BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for contributions toward [Big O Speedrun](https://bigospeedrun.com) — a companion, never the project. Org story: [profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
-
-## What work can be done here
-
-The exact-K filed bound is **Lean Verified** (verifier#184 @ `6189ae976a538f309232e73ad147c351dc2410f2`, run 42435729355, closed 2026-11-08; commits after the pin are docs/license only). This repo's earlier 1/10²³⁷ filing was verifier#178; the symbolic-K bar holder is heilbronn-triangle-ten237 (verifier#126). Open work: independent rebuilds of the pinned package; the next positive-power improvement (see the [heilbronn-bar](https://github.com/BigO-Hunter/heilbronn-bar) lane, private, for the live bar).
-
+[BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for [Big O Speedrun](https://bigospeedrun.com) contributions · [org profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
