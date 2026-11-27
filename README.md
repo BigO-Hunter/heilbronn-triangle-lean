@@ -2,6 +2,8 @@
 
 Lean Verified submission for the [Big O Speedrun heilbronn-triangle board](https://bigospeedrun.com/other/heilbronn-triangle) — the first machine-checked positive power improvement on the board's issue route (opened 2026-11-03, [verifier#105](https://github.com/bigospeedrun/verifier/issues/105)).
 
+> Board (Nov 26 2026): this repo verifies η = 1/10²³⁷ (Lean); the open race is currently led by Qiuyu Chen (Euler)'s claimed η > 1.98·10⁻⁸ (Oct 19) — see [bigospeedrun.com](https://bigospeedrun.com).
+
 ## The result
 
 ```lean
@@ -38,6 +40,6 @@ Licensed under the CFSF License (see `LICENSE`, ([github.com/darkhipo/cfsf](http
 
 ## Status and next steps
 
-Lean Verified via [verifier#126](https://github.com/bigospeedrun/verifier/issues/126) (run 41623930086); the board pins this repo @ `236a3233`. Open work: independent reruns. The exact-K rung above this bar — η = 1/(100000·K) ≈ 7.2144×10⁻²³⁷, `K = C(C(163,41),3)²+1` computed in Lean, Lean Verified as [verifier#184](https://github.com/bigospeedrun/verifier/issues/184) @ `6189ae97` — is in [BigO-Hunter/heilbronn-triangle-lean](https://github.com/BigO-Hunter/heilbronn-triangle-lean). Lane memory: [heilbronn-bar](https://github.com/BigO-Hunter/heilbronn-bar) (private).
+Lean Verified via [verifier#126](https://github.com/bigospeedrun/verifier/issues/126) (run 41623930086); the board pins this repo @ `236a3233`. Open work: independent reruns. The exact-K rung above this bar — η = 1/(100000·K) ≈ 7.2144×10⁻²³⁷, `K = C(C(163,41),3)²+1` computed in Lean, Lean Verified as [verifier#184](https://github.com/bigospeedrun/verifier/issues/184) @ `6189ae97` — is in [BigO-Hunter/heilbronn-triangle-lean](https://github.com/BigO-Hunter/heilbronn-triangle-lean). Heilbronn board history: [heilbronn-bar](https://github.com/BigO-Hunter/heilbronn-bar).
 
 [BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for [Big O Speedrun](https://bigospeedrun.com) contributions · [org profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
