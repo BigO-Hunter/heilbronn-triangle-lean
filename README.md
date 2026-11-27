@@ -17,6 +17,8 @@ submission form requires).
 
 **Filing status:** verifier#184 — Lean Verified for commit `6189ae97` (run 42435729355). η ≈ 7.2144×10⁻²³⁷ ≈ 7.2× the 1/10²³⁷ bar.
 
+> Board (Nov 26 2026): this repo verifies η ≈ 7.2144×10⁻²³⁷ (Lean); the open race is currently led by Qiuyu Chen (Euler)'s claimed η > 1.98·10⁻⁸ (Oct 19) — see [bigospeedrun.com](https://bigospeedrun.com).
+
 ## Build
 
 Lean `leanprover/lean4:v4.34.1`, Mathlib `d13f23b723b8a846827a245b89c10fc7d3f11612`
