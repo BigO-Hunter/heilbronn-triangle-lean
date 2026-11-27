@@ -36,17 +36,8 @@ lake build Submission
 
 Licensed under the CFSF License (see `LICENSE`, ([github.com/darkhipo/cfsf](https://github.com/darkhipo/cfsf))). Definitions and the comparator proof tree: Copyright OpenAI (see `NOTICE`, `LICENSE`). Vacuity checks: prepared with assistance from Claude (Anthropic) for @joshuacortez. Bridge, port rewiring and this entry: prepared by darkhipo's agent. The Heilbronn statement files come from [bigospeedrun/verifier](https://github.com/bigospeedrun/verifier), which credits the sources above.
 
----
+## Status and next steps
 
-## Why this repo is up
+Lean Verified via [verifier#126](https://github.com/bigospeedrun/verifier/issues/126) (run 41623930086); the board pins this repo @ `236a3233`. Open work: independent reruns. The exact-K rung above this bar — η = 1/(100000·K) ≈ 7.2144×10⁻²³⁷, `K = C(C(163,41),3)²+1` computed in Lean, Lean Verified as [verifier#184](https://github.com/bigospeedrun/verifier/issues/184) @ `6189ae97` — is in [BigO-Hunter/heilbronn-triangle-lean](https://github.com/BigO-Hunter/heilbronn-triangle-lean). Lane memory: [heilbronn-bar](https://github.com/BigO-Hunter/heilbronn-bar) (private).
 
-Reproducible verified bounds: the first machine-checked positive-power improvement on the Heilbronn board (Race.bound at 1/10²³⁷; route verifier#105, Lean Verified verifier#126) — public evidence for independent reruns.
-
-[BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for contributions toward [Big O Speedrun](https://bigospeedrun.com) — a companion, never the project. Org story: [profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
-
-## What work can be done here
-
-The verified row stands (route verifier#105; Lean Verified verifier#126, run 41623930086; the board pins this repo @ `236a3233`, pre-transfer darkhipo namespace — GitHub redirect preserves access). Open work: independent reruns.
-
-Pushing η **above** 1/10²³⁷ toward the paper-exact η₀ ≈ 7.2144×10⁻²³⁷ (higher η is better; η₀ sits **above** the filed bar) is **done** in [BigO-Hunter/heilbronn-triangle-lean](https://github.com/BigO-Hunter/heilbronn-triangle-lean): the exact-K rung `η = 1/(100000·K)`, `K = C(C(163,41),3)²+1` computed in Lean, Lean Verified as verifier#184 @ `6189ae97`. Lane memory: [heilbronn-bar](https://github.com/BigO-Hunter/heilbronn-bar) (private).
-
+[BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for [Big O Speedrun](https://bigospeedrun.com) contributions · [org profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
