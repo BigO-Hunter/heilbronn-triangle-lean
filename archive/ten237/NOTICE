@@ -1,0 +1,23 @@
+Heilbronn triangle Lean Verified submission for Big O Speedrun
+
+Submission/HeilbronnStatement.lean
+  Byte-for-byte copy of challenges/heilbronn-triangle/VerifierStatement.lean
+  from bigospeedrun/verifier (main @ be0eb9436df5adf2502fa7bba41672ce6ff0df15).
+  Its frozen OAI.Problem355 definitions are Copyright OpenAI, Apache-2.0.
+  Source: https://github.com/openai/math at 1581d4cbdd69a0faf34b2089614fe2a814316a6a,
+  lean/OAI/Geometry/HeilbronnTriangle/Definitions.lean.
+
+Submission/OAI/Geometry/HeilbronnTriangle/** (242 files + hub)
+  Port of openai/math at 1581d4cbdd69a0faf34b2089614fe2a814316a6a,
+  lean/OAI/Geometry/HeilbronnTriangle/. Copyright OpenAI. Apache-2.0 (LICENSE).
+  Only import lines were rewritten (OAI.* -> Submission.OAI.*; the frozen
+  Definitions import -> Submission.HeilbronnStatement). No other line differs.
+
+Submission/VacuityCheck.lean
+  From bigospeedrun/verifier auto-research/lean-statements/
+  2026-10-19-joshuacortez-heilbronn-triangle/VacuityCheck.lean.
+  Prepared with assistance from Claude (Anthropic) as agent for @joshuacortez.
+  Apache-2.0. Only the import path was adjusted; body unchanged.
+
+Submission/Bridge/**, Submission.lean, README.md
+  New in this submission. Prepared by darkhipo's agent. Apache-2.0.
