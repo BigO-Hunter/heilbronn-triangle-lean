@@ -15,6 +15,8 @@ Filed saving: `η = 1/(100000·K) = 1/138611120630192845449848501984762489503949
 (237-digit denominator, numerator 1 ⇒ one reduced fraction, as the
 submission form requires).
 
+**Filing status:** verifier#184 — Lean Verified for commit `6189ae97` (run 42435729355). η ≈ 7.2144×10⁻²³⁷ ≈ 7.2× the 1/10²³⁷ bar.
+
 ## Build
 
 Lean `leanprover/lean4:v4.34.1`, Mathlib `d13f23b723b8a846827a245b89c10fc7d3f11612`
@@ -68,11 +70,11 @@ Licensed under the CFSF License — see `LICENSE` ([github.com/darkhipo/cfsf](ht
 
 ## Why this repo is up
 
-Reproducible verified bounds: this package backs the org's Heilbronn triangle filing (bound 1/10²³⁷, verifier#126 verified) so anyone can rebuild and recheck it against the board's issue route.
+Reproducible verified bounds: this package backs the org's **exact-K** Heilbronn filing — η = 1/(100000·K) ≈ 7.2144×10⁻²³⁷ (≈7.2× the 1/10²³⁷ symbolic-K bar), filed as [verifier#184](https://github.com/bigospeedrun/verifier/issues/184) and **Lean Verified** at commit `6189ae97` (run 42435729355) — so anyone can rebuild and recheck it against the board's issue route. The 1/10²³⁷ bar itself is held by [BigO-Hunter/heilbronn-triangle-ten237](https://github.com/BigO-Hunter/heilbronn-triangle-ten237) (verifier#126).
 
 [BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for contributions toward [Big O Speedrun](https://bigospeedrun.com) — a companion, never the project. Org story: [profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
 
 ## What work can be done here
 
-The filed bound is verified (verifier#126). Open work: independent rebuilds of the pinned package; the next positive-power improvement (see the heilbronn-bar lane for the live bar).
+The exact-K filed bound is **Lean Verified** (verifier#184 @ `6189ae976a538f309232e73ad147c351dc2410f2`, run 42435729355, closed 2026-11-08; commits after the pin are docs/license only). This repo's earlier 1/10²³⁷ filing was verifier#178; the symbolic-K bar holder is heilbronn-triangle-ten237 (verifier#126). Open work: independent rebuilds of the pinned package; the next positive-power improvement (see the [heilbronn-bar](https://github.com/BigO-Hunter/heilbronn-bar) lane, private, for the live bar).
 
